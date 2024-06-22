@@ -7,27 +7,180 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            text-align: center;
             margin: 0;
             padding: 0;
+            background-color: #f4f4f4;
         }
-        header {
-            background-color: #4CAF50;
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #57cce9;
             color: white;
-            padding: 1em;
+            padding: 20px;
         }
-        section {
-            padding: 2em;
+        .header .info {
+            flex: 1;
+        }
+        .header .photo {
+            flex: 0 0 150px;
+        }
+        .header .photo img {
+            width: 200px;
+            height: 300px;
+            border-radius: 0;
+        }
+        .content {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            border-bottom: 2px solid black;
+            padding-bottom: 5px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        table, th, td {
+            border: none;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border: none;
+        }
+        .bullet {
+            width: 10px;
+            height: 10px;
+            background-color: black;
+            border-radius: 50%;
+            display: inline-block;
+            margin-right: 10px;
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Welcome to My Homepage</h1>
-    </header>
-    <section>
-        <p>Hello! My name is Tian Qijia. Welcome to my personal homepage.</p>
-        <p>You can find my projects on <a href="https://github.com/yourusername">GitHub</a>.</p>
-    </section>
+    <div class="header">
+        <div class="info">
+            <h1>Tian, Qijia</h1>
+            <p>Mobile Phone: (+852) 51283624 | Email: tianqijia2011@outlook.com</p>
+            <p>Address: 3F, 397 Queen’s Road West, Hong Kong</p>
+            <p>Research Interests: Computer Vision, Machine Learning, Artificial Intelligence</p>
+        </div>
+        <div class="photo">
+            <img src="./photo.jpeg" alt="TianQijiaPhoto">
+        </div>
+    </div>
+    <div class="content">
+        <h2>EDUCATION</h2>
+        <h3>The University of Hong Kong, Sept 2024 - June 2025(Estimated);</h3>
+        <p>Msc in Computer Science, HKU.</p>
+
+        <h3>The University of Hong Kong, Sept 2020 - June 2024</h3>
+        <p>BENG in Computer Engineering, HKU. The First Class Honor, GPA: 3.74/4.3;</p>
+        <p>Courses: Computer Vision (B); Digital System Design (A+); Computer Architecture (A); Control System I (A+); Probabilistic System Analysis (A+); Signal and Linear Systems (A-).</p>
+
+        <h2>PROJECT EXPERIENCE</h2>
+        <h3>Research Assistant, AI-Powered Smart Petition Management System, Ningbo</h3>
+        <p>2022.01-2022.12</p>
+        <ul>
+            <li>Developed an AI-driven system to streamline petition management by integrating data analytics and automation;</li>
+            <li>Employed a unique approach to classifying over 700 types of petition work orders, achieving high accuracy in archiving;</li>
+            <li>Implemented a visual presentation mode to optimize workflow, enhancing petition business management;</li>
+            <li>Integrated data from various sources, including petition records, historical cases, and policy data;</li>
+            <li>Utilized a text mining system for pre-processing and analysis, including text classification and summarization;</li>
+            <li>Anticipate a 150% increase in sales performance over the next two years as a direct result of the project’s success;</li>
+        </ul>
+
+        <h3>Developer, Design of a Self-defined Linux Shell, Hong Kong</h3>
+        <p>2022.10-2022.11</p>
+        <ul>
+            <li>Developed and managed a custom Linux shell;</li>
+            <li>Coordinated and oversaw multiple concurrent processes;</li>
+            <li>inter-process communication through signals and pipes;</li>
+            <li>Gathered and analyzed runtime statistics for each process.</li>
+        </ul>
+
+        <h3>Member, Summer Engineering Training, Hong Kong</h3>
+        <p>2022.06-2022.07</p> 
+        <ul>
+            <li>Virtual Instrumentation (VI): Gained proficiency in coding and hardware development for virtual instrumentation circuits; </li>
+            <li>Practical Networking (NET): Acquired skills in designing and configuring data networks; </li>
+            <li>Microcontroller (MIC): Developed expertise in designing and programming microcontrollers; </li>
+            <li>Internet of Things (IoT): Learned to program and configure Raspberry Pi for IoT applications; </li>
+            <li>Schematic Drawing (PCB): Gained knowledge in creating circuit schematics using PCB software.</li>
+        </ul>
+
+        <h3>Research Assistant, Research on Intelligent Maintenance and Irrigation Techniques for Elevated Greenery along Waterfronts, Ningbo 2021.12-2022.06 </h3>
+        <ul>
+            <li>Developed an intelligent irrigation solution for elevated greenery, and utilized IoT technology to optimize water usage;</li>
+            <li>Implemented a Transformer-based model for water demand prediction, enabling precise and on-demand irrigation;</li>
+            <li>Utilized position encoding and an encoder-decoder framework to capture temporal information and improve prediction accuracy;</li>
+            <li>Trained a predictive model using historical environmental data, achieving reliable results for real-world applications;</li>
+            <li>Designed an intelligent irrigation system that reduces operational workload and proactively identifies faults, leading to a reduction in plant mortality;</li>
+            <li>Led the initial requirements gathering, conducted algorithm research, oversaw code design, and managed on-site IoT sensor setup and debugging;</li>
+            <li>Personal contributions: Spearheaded the initial requirements gathering and analysis; played a key role in algorithm research and specific code design within the model framework, and supervised the setup and debugging of IoT sensors on-site</li>
+        </ul>
+        
+        <h2>INTERNSHIPS</h2>
+        <h3>Fintech Intern, China Construction Bank Corporation, Ningbo</h3>
+        <p>2023.07-2023.08</p>
+        <ul>
+            <li>Conducted website and system testing using Jmeter and Python;</li>
+            <li>Collaborated with the development team to identify and resolve software issues, and facilitated the optimization of the banking platform’s functionality;</li>
+            <li>Assisted in the analysis of user feedback and usage data, recommended improvements and refinements to enhance the overall user experience;</li>
+            <li>Participated in meetings and discussions with senior developers and fintech experts, gaining insights into the latest trends and innovations in the financial technology industry.</li>
+        </ul>
+
+        <h3>Software and Hardware Development Intern, Ningbo Zhongda Leader Intelligent Transmission Co., Ltd., Ningbo</h3>
+        <p>2023.06-2023.07</p>
+        <ul>
+            <li>Participated in motor manufacturing, design, and testing;</li>
+            <li>Cooperated with the engineering team to design and prototype motor components, and implemented creative solutions to enhance motor performance and efficiency;</li>
+            <li>Conducted testing and quality assurance procedures to ensure that motors met industry standards and customer expectations.</li>
+        </ul>
+
+        <h2>HONORS & AWARDS</h2>
+        <table>
+            <tr>
+                <td><span class="bullet"></span>Faculty of Engineering Peer Mentorship Programme Certificate 2022-2023</td>
+                <td>2023.07</td>
+            </tr>
+            <tr>
+                <td><span class="bullet"></span>Dean’s Honors List 2021-2022</td>
+                <td>2023.02</td>
+            </tr>
+            <tr>
+                <td><span class="bullet"></span>The 2022 RobotMaster Sim2Real Challenge First Prize</td>
+                <td>2022.08</td>
+            </tr>
+            <tr>
+                <td><span class="bullet"></span>Dean’s Honors List 2020-2021</td>
+                <td>2022.01</td>
+            </tr>
+        </table>
+
+        <h2>EXTRACURRICULAR ACTIVITIES</h2>
+        <table>
+            <tr>
+                <td><span class="bullet"></span>Faculty Student Adviser (FSA), Faculty of Engineering, HKU, Hong Kong</td>
+                <td>2022.09-2024.06</td>
+            </tr>
+            <tr>
+                <td><span class="bullet"></span>Assistant, Guizhou Counterpart Assistance Activities, Ningbo Public Security Bureau, Ningbo</td>
+                <td>2021.07</td>
+            </tr>
+        </table>
+
+        <h2>SKILLS & LANGUAGES</h2>
+        <ul>
+            <li>Languages: Mandarin (Native), English (Work language), Cantonese (Basic)</li>
+            <li>IT skills: SQL, PyCharm, MATLAB, C, Python</li>
+        </ul>
+    </div>
 </body>
 </html>
