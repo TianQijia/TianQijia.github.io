@@ -36,6 +36,24 @@
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
+        .content .photo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .content .photo img {
+            width: 50%;
+            height: auto;
+        }
+
+        .content .photo .caption {
+            margin-top: 10px;
+            font-size: 14px;
+            color: #555;
+            text-align: center;
+        }
         h2 {
             border-bottom: 2px solid black;
             padding-bottom: 5px;
@@ -81,10 +99,20 @@
         <p>Msc in Computer Science, HKU.</p>
 
         <h3>The University of Hong Kong, Sept 2020 - June 2024</h3>
-        <p>BENG in Computer Engineering, HKU. The First Class Honor, GPA: 3.74/4.3;</p>
+        <p>BENG in Computer Engineering, HKU, with First Class Honor, GPA: 3.74/4.3;</p>
         <p>Courses: Computer Vision (B); Digital System Design (A+); Computer Architecture (A); Control System I (A+); Probabilistic System Analysis (A+); Signal and Linear Systems (A-).</p>
 
         <h2>PROJECT EXPERIENCE</h2>
+        <h3>Developer, Senior Design Project - Explainable Machine Learning Algorithm and Hardware For Surigical Robot, Hong Kong</h3>
+        <p>2023.09-2024.04</p>
+        <ul>
+            <li>Developed an AI-driven segmentation approach tailored for breast tumor delineation, focusing on efficiency and interpretability;</li>
+            <li>Designed and implemented an Attention UNet model to achieve high segmentation accuracy while addressing computational constraints in medical imaging tasks.</li>
+            <li>Conducted extensive experimentation, including data preprocessing, model training, and evaluation.</li>
+            <li>Achieved high and stable accuracy in segmenting breast tumor images. However, the Intersection over Union (IoU) metric indicated areas for improvement.</li>
+            <li>Developed a hardware system prototype for a surgical robot, including motor control, sensor integration, and real-time data processing;</li>
+            <li>Highlighted the need for continued research to enhance model interpretability and expand its applicability across various medical imaging modalities.</li>
+        </ul>
         <h3>Research Assistant, AI-Powered Smart Petition Management System, Ningbo</h3>
         <p>2022.01-2022.12</p>
         <ul>
@@ -115,7 +143,8 @@
             <li>Schematic Drawing (PCB): Gained knowledge in creating circuit schematics using PCB software.</li>
         </ul>
 
-        <h3>Research Assistant, Research on Intelligent Maintenance and Irrigation Techniques for Elevated Greenery along Waterfronts, Ningbo 2021.12-2022.06 </h3>
+        <h3>Research Assistant, Research on Intelligent Maintenance and Irrigation Techniques for Elevated Greenery along Waterfronts, Ningbo </h3>
+        <p>2021.12-2022.06</p>
         <ul>
             <li>Developed an intelligent irrigation solution for elevated greenery, and utilized IoT technology to optimize water usage;</li>
             <li>Implemented a Transformer-based model for water demand prediction, enabling precise and on-demand irrigation;</li>
@@ -181,6 +210,19 @@
             <li>Languages: Mandarin (Native), English (Work language), Cantonese (Basic)</li>
             <li>IT skills: SQL, PyCharm, MATLAB, C, Python</li>
         </ul>
+
+        <h2>APPENDIX</h2>
+        <h3>
+            <center>
+                <a href = "https://github.com/TianQijia/Explainable_AttentionUnet"target = "_blank">Senior Design Project Link</a>
+            </center>
+        </h3>
+        <h3>
+            <div class = "photo">
+                <img src="./RMUA.jpeg" alt = "RUMA Sim2Real Candidates Photos">
+                <div class = "caption">The 2022 RobotMaster Sim2Real Challenge First Prize Team</div>
+            </div>
+        </h3>
     </div>
 </body>
 </html>
