@@ -22,24 +22,46 @@
             border-bottom: 2px solid black;
             padding-bottom: 5px;
         }
-        .pdf-container {
+        .certificate {
             margin-bottom: 20px;
+            text-align: center;
         }
-        iframe {
+        .certificate img {
+            width: 80%;
+            height: auto;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .caption {
+            margin-top: 10px;
+            font-size: 14px;
+            color: #555;
+        }
+        .gif {
             width: 100%;
-            height: 600px;
-            border: none;
+            height: 0;
+            padding-bottom: 56.25%; /* 16:9 ratio */
+            position: relative;
+            background: url('./train.gif') no-repeat center center;
+            background-size: contain;
         }
     </style>
 </head>
 <body>
     <div class="content">
-        <h2>Certificates Collection</h2>
-        <div class="pdf-container">
-            <h3>My Undergraduate Certificate</h3>
-            <iframe src="./certificates.pdf"></iframe>
+        <div class="gif"></div>
+    </div>
+    <div class="content">
+        <h2>My Certificates</h2>
+        <div class="certificate">
+            <img src="./c1.png" alt="MentorShip Certificate">
+            <div class="caption">MentorShip Certificate</div>
         </div>
-        <!-- 继续添加更多PDF文件 -->
+        <div class="certificate">
+            <img src="./c2.png" alt="RUMA Certificate">
+            <div class="caption">RUMA Certificate</div>
+        </div>
+        <!-- 继续添加更多证书 -->
     </div>
 </body>
 </html>
