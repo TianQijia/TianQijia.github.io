@@ -17,6 +17,7 @@
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             margin-bottom: 20px;
+            
         }
         h2 {
             border-bottom: 2px solid black;
@@ -37,19 +38,23 @@
             font-size: 14px;
             color: #555;
         }
+        .gif-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 200px; /* Adjust this height as needed */
+        }
         .gif {
-            width: 100%;
-            height: 0;
-            padding-bottom: 56.25%; /* 16:9 ratio */
-            position: relative;
-            background: url('./train.gif') no-repeat center center;
-            background-size: contain;
+            width: auto; /* Adjust this width as needed */
+            height: 200px;
         }
     </style>
 </head>
 <body>
     <div class="content">
-        <div class="gif"></div>
+        <div class="gif-container">
+            <img src="./train.gif" alt="Train GIF" class="gif">
+        </div>
     </div>
     <div class="content">
         <h2>My Certificates</h2>
@@ -62,6 +67,11 @@
             <div class="caption">RUMA Certificate</div>
         </div>
         <!-- 继续添加更多证书 -->
+    </div>
+    <div class="content" >
+        <center>
+            <a href="./index.html">Back to Home</a>
+        </center>
     </div>
 </body>
 </html>

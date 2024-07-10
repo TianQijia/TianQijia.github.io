@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Project Info</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        .project-info {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .project-info h2 {
+            margin-top: 0;
+        }
+        .project-info p {
+            margin: 10px 0;
+        }
+        .markdown-body {
+            box-sizing: border-box;
+            min-width: 200px;
+            max-width: 980px;
+            margin: 0 auto;
+            padding: 45px;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/4.0.0/github-markdown.min.css">
+</head>
+<body>
+    <h1>GitHub Project Information</h1>
+    <div id="project-info" class="project-info"></div>
+    <div id="readme" class="markdown-body">
+        <h1>Explainable Machine Learning Algorithm and Hardware for Surgical Robotics</h1>
+
+        <h2>Overview</h2>
+        <p>This project aims to develop an AI-driven segmentation approach tailored for breast tumor delineation, focusing on efficiency and interpretability. The primary objective is to design an Attention UNet model capable of achieving high segmentation accuracy while addressing computational constraints commonly encountered in medical imaging tasks.</p>
+
+        <h2>Features</h2>
+        <ul>
+            <li><strong>High Segmentation Accuracy</strong>: Utilizes Attention UNet model to achieve precise segmentation of breast tumor images.</li>
+            <li><strong>Interpretability</strong>: Implements various interpretability methods like GradCAM to provide insights into model decisions.</li>
+            <li><strong>Efficient Computation</strong>: Designed to work with limited computational resources, such as those available in environments like Google Colab.</li>
+            <li><strong>Hardware Integration</strong>: Proposes a high-performance, low-power hardware solution to complement the algorithm.</li>
+        </ul>
+
+        <h2>Requirements</h2>
+        <ul>
+            <li>Python 3.x</li>
+            <li>TensorFlow</li>
+            <li>NumPy</li>
+            <li>OpenCV</li>
+            <li>tf_explain (for interpretability methods)</li>
+            <li>Jupyter Notebook</li>
+        </ul>
+
+        <h2>Installation</h2>
+        <ol>
+            <li>Clone the repository:
+                <pre><code>git clone https://github.com/TianQijia/Explainable_AttentionUnet.git
+cd Explainable_AttentionUnet</code></pre>
+            </li>
+            <li>Install the required packages:
+                <pre><code>pip install -r requirements.txt</code></pre>
+            </li>
+        </ol>
+
+        <h2>Usage</h2>
+        <h3>Running the Jupyter Notebook</h3>
+        <ol>
+            <li>Open the Jupyter Notebook:
+                <pre><code>jupyter notebook</code></pre>
+            </li>
+            <li>In the Jupyter Notebook interface, navigate to the <code>finalcode.ipynb</code> file and open it.</li>
+            <li>Run all the cells in the notebook to execute the code. This will include loading the dataset, training the model, evaluating the model, and visualizing the interpretability results.</li>
+        </ol>
+
+        <h3>Training the Model</h3>
+        <ol>
+            <li>Prepare your dataset and place it in the <code>data</code> directory.</li>
+            <li>Open and run the <code>finalcode.ipynb</code> notebook. Follow the instructions provided in the notebook to train the model.</li>
+        </ol>
+
+        <h3>Evaluating the Model</h3>
+        <ol>
+            <li>After training, evaluation results will be generated as part of the <code>finalcode.ipynb</code> notebook. Follow the instructions provided in the notebook to evaluate the model.</li>
+        </ol>
+
+        <h3>Visualizing Interpretability Results</h3>
+        <ol>
+            <li>Use the interpretability sections in the <code>finalcode.ipynb</code> notebook to generate visualizations. This includes visualizing GradCAM and other interpretability methods to understand the model's decision-making process.</li>
+        </ol>
+
+        <h2>Methodology</h2>
+        <h3>Data Input</h3>
+        <p>The dataset used for training is the Breast Ultrasound Images Dataset from Kaggle, containing 780 images of breast ultrasounds with annotations for tumor regions.</p>
+
+        <h3>Model Design</h3>
+        <p>The model architecture is based on the UNet framework, enhanced with attention mechanisms to improve interpretability and segmentation accuracy. The model includes Encoder Blocks, Decoder Blocks, and Attention Gates.</p>
+
+        <h3>Evaluation Metrics</h3>
+        <p>The model's performance is evaluated using metrics such as Dice coefficient, Intersection over Union (IoU), accuracy, sensitivity, and specificity.</p>
+
+        <h2>Results</h2>
+        <p>The model demonstrates high segmentation accuracy, with extensive experimentation revealing stable performance metrics. The use of interpretability methods like GradCAM provides valuable insights into the model's decision-making process.</p>
+
+        <h2>Limitations</h2>
+        <p>Despite its promise, the model has limitations such as a small dataset size and instability in training performance. Future work involves expanding the dataset, improving evaluation metrics, and integrating advanced architectures like Transformers.</p>
+
+        <h2>Future Work</h2>
+        <ul>
+            <li>Acquiring larger, more diverse datasets.</li>
+            <li>Enhancing evaluation metrics for better performance representation.</li>
+            <li>Improving hardware efficiency to support the computational demands.</li>
+            <li>Integrating the model with large language models for better interpretability.</li>
+        </ul>
+
+        <h2>Contributing</h2>
+        <p>Contributions are welcome! Please fork the repository and submit pull requests.</p>
+
+        <h2>License</h2>
+        <p>This project is licensed under the MIT License. See the <a href="LICENSE">LICENSE</a> file for details.</p>
+
+        <h2>Acknowledgments</h2>
+        <p>Special thanks to the project supervisors Dr. Can Li and contributors for their guidance and support.</p>
+
+        <hr>
+
+        <p>For more details, please refer to the <a href="https://pan.baidu.com/s/1FCUw8LEnx3KPdNBm-D1ciA?pwd=t7hi">technical paper</a>.</p>
+    </div>
+    <div>
+        <a href="./index.html">Back to Home</a>
+    </div>
+
+    <script>
+        async function fetchGitHubRepo() {
+            try {
+                const response = await fetch('https://api.github.com/repos/TianQijia/Explainable_AttentionUnet');
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                const repo = await response.json();
+                
+                const projectInfoDiv = document.getElementById('project-info');
+                if (repo) {
+                    projectInfoDiv.innerHTML = `
+                        <h2>${repo.name || 'No name available'}</h2>
+                        <p>${repo.description || 'No description available'}</p>
+                        <p><strong>Stars:</strong> ⭐ ${repo.stargazers_count || 0}</p>
+                        <p><strong>Forks:</strong> 🍴 ${repo.forks_count || 0}</p>
+                        <p><strong>Open Issues:</strong> ${repo.open_issues_count || 0}</p>
+                        <p><strong>Default Branch:</strong> ${repo.default_branch || 'N/A'}</p>
+                        <p><strong>Last Updated:</strong> ${new Date(repo.updated_at).toLocaleDateString()}</p>
+                        <p><a href="${repo.html_url}" target="_blank">View on GitHub</a></p>
+                    `;
+                } else {
+                    projectInfoDiv.innerHTML = `<p>Repository information is not available.</p>`;
+                }
+            } catch (error) {
+                const projectInfoDiv = document.getElementById('project-info');
+                projectInfoDiv.innerHTML = `<p>Error fetching repository information: ${error.message}</p>`;
+            }
+        }
+
+        fetchGitHubRepo();
+    </script>
+</body
