@@ -17,10 +17,11 @@
             align-items: center;
             background-color: #57cce9;
             color: white;
-            padding: 20px;
+            padding: 10px;
         }
         .header .info {
             flex: 1;
+            max-width: 1000px;
         }
         .header .photo {
             flex: 0 0 150px;
@@ -29,6 +30,44 @@
             width: 200px;
             height: 300px;
             border-radius: 0;
+        }
+        .nav {
+            background-color: #57cce9;
+            overflow: hidden;
+        }
+
+        .nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: space-between; /* evenly distribute the buttons in a row */
+        }
+
+        .nav ul li {
+            flex: 1; /* same space for each button */
+            margin: 5px; /* same gap for each button */
+        }
+
+        .nav ul li a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            padding: 14px 0;
+            text-decoration: none;
+            background-color: #39acc9;
+            border-radius: 15px; /* round shape */
+            width: 100%;
+            height: 100%;
+            flex-basis: 14%;
+            box-sizing: border-box;
+
+        }
+
+        .nav ul li a:hover {
+            background-color: #40c12c;
         }
         .content {
             background-color: white;
@@ -42,7 +81,6 @@
             align-items: center;
             flex-direction: column;
         }
-
         .content .photo img {
             width: 50%;
             height: auto;
@@ -88,13 +126,27 @@
             <p>Mobile Phone: (+852) 51283624 | Email: tianqijia2011@outlook.com</p>
             <p>Address: 3F, 397 Queen’s Road West, Hong Kong</p>
             <p>Research Interests: Computer Vision, Machine Learning, Artificial Intelligence</p>
+            <p>As a passionate computer engineering graduate with a strong background in computer vision and machine learning, I aim to leverage my technical skills and research experience to develop innovative AI solutions. Seeking opportunities to contribute to cutting-edge projects and advance my career in the field of artificial intelligence.</p>
         </div>
         <div class="photo">
             <img src="./photo.jpeg" alt="TianQijiaPhoto">
         </div>
     </div>
+
+    <div class="nav">
+        <ul>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#internships">Internships</a></li>
+            <li><a href="#honors">Honors & Awards</a></li>
+            <li><a href="#activities">Extracurricular Activities</a></li>
+            <li><a href="#skills">Skills & Languages</a></li>
+            <li><a href="#appendix">Appendix</a></li>
+        </ul>
+    </div>
+
     <div class="content">
-        <h2>EDUCATION</h2>
+        <h2 id = "education">EDUCATION</h2>
         <h3>The University of Hong Kong, Sept 2024 - June 2025 (Estimated);</h3>
         <p>Msc in Computer Science, HKU.</p>
 
@@ -102,7 +154,7 @@
         <p>BENG in Computer Engineering, HKU, with First Class Honor, GPA: 3.74/4.3;</p>
         <p>Courses: Senior Design Project (A-); Introduction to Deep Learning for Computer Vision (A+); Algoirithm Design (A); Digital System Design (A+); Computer Architecture (A); Control System I (A+); Probabilistic System Analysis (A+); Signal and Linear Systems (A-).</p>
 
-        <h2>PROJECT EXPERIENCE</h2>
+        <h2 id = "projects">PROJECT EXPERIENCE</h2>
         <h3>Developer, Senior Design Project - Explainable Machine Learning Algorithm and Hardware For Surigical Robot, Hong Kong</h3>
         <p>2023.09-2024.04</p>
         <ul>
@@ -156,7 +208,7 @@
             <li>Personal contributions: Spearheaded the initial requirements gathering and analysis; played a key role in algorithm research and specific code design within the model framework, and supervised the setup and debugging of IoT sensors on-site.</li>
         </ul>
         
-        <h2>INTERNSHIPS</h2>
+        <h2 id = "internships">INTERNSHIPS</h2>
         <h3>Fintech Intern, China Construction Bank Corporation, Ningbo</h3>
         <p>2023.07-2023.08</p>
         <ul>
@@ -174,7 +226,7 @@
             <li>Conducted testing and quality assurance procedures to ensure that motors met industry standards and customer expectations.</li>
         </ul>
 
-        <h2>HONORS & AWARDS</h2>
+        <h2 id = "honors">HONORS & AWARDS</h2>
         <table>
             <tr>
                 <td><span class="bullet"></span>Faculty of Engineering Peer Mentorship Programme Certificate 2022-2023</td>
@@ -194,7 +246,7 @@
             </tr>
         </table>
 
-        <h2>EXTRACURRICULAR ACTIVITIES</h2>
+        <h2 id = "activities">EXTRACURRICULAR ACTIVITIES</h2>
         <table>
             <tr>
                 <td><span class="bullet"></span>Faculty Student Adviser (FSA), Faculty of Engineering, HKU, Hong Kong</td>
@@ -206,13 +258,13 @@
             </tr>
         </table>
 
-        <h2>SKILLS & LANGUAGES</h2>
+        <h2 id = "skills">SKILLS & LANGUAGES</h2>
         <ul>
             <li>Languages: Mandarin (Native), English (Work language), Cantonese (Basic)</li>
             <li>IT skills: Pytorch, SQL, VHDL, MATLAB, C, Python</li>
         </ul>
 
-        <h2>APPENDIX</h2>
+        <h2 id = "appendix">APPENDIX</h2>
         <h3>
             <div class = "photo">
                 <img src="./RMUA.jpeg" alt = "RUMA Sim2Real Candidates Photos">
@@ -241,6 +293,7 @@
                 <a href = "./certificates.html" target="_blank">Certificates Copy</a>
             </center>
         </h3>
+        
     
     </div>
 </body>
