@@ -68,6 +68,10 @@
 
         }
 
+        .nav ul li a.active {
+            background-color: #c0b708;
+        }
+
         .nav ul li a:hover {
             background-color: #40c12c;
         }
@@ -301,4 +305,35 @@
         
     </div>
 </body>
+<script>
+    // 选择所有的导航链接
+    const navLinks = document.querySelectorAll('.nav ul li a');
+
+    // 定义每个部分的元素及其对应的导航链接
+    const sections = document.querySelectorAll('h2[id]');
+    const sectionMap = {};
+    sections.forEach(section => {
+        const id = section.getAttribute('id');
+        sectionMap[id] = document.querySelector(`.nav ul li a[href="#${id}"]`);
+    });
+
+    // 监听滚动事件
+    window.addEventListener('scroll', () => {
+        let current = '';
+        
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            if (pageYOffset >= sectionTop - 60) {
+                current = section.getAttribute('id');
+            }
+        });
+
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href') === `#${current}`) {
+                link.classList.add('active');
+            }
+        });
+    });
+</script>
 </html>
