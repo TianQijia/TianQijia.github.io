@@ -139,19 +139,6 @@
             display: inline-block;
             margin-right: 10px;
         }
-        .round-button {
-            width: 100px;
-            height: 50px;
-            font-size: 20px;
-            line-height: 42px;
-            border: 1px solid;
-            border-radius: 25%;
-            text-align: center;
-            color: #2ec9ef;
-            background-color: white;
-            /* border: none; */
-            cursor: pointer;
-        }
     </style>
 </head>
 <body>
@@ -165,7 +152,7 @@
             <li><a href="#activities">Extracurricular Activities</a></li>
             <li><a href="#skills">Skills & Languages</a></li>
             <li><a href="#appendix">Appendix</a></li>
-            <li><button id="toggleLanguage">CN</button></li>
+            <li><button id="toggleLanguage">中文</button></li>
         </ul>
     </div>
 
@@ -333,6 +320,9 @@
             </center>
         </h3>
 
+        <h2 id="announcement">Announcement</h2>
+        <p>Although this website has translated Chinese version, the information on English version is the only reliable source that you can reference.</p>
+
     </div>
 
 </body>
@@ -345,7 +335,7 @@
     let toggleLanguage = document.getElementById("toggleLanguage");
     toggleLanguage.addEventListener("click", () => {
       // debugger
-      if (toggleLanguage.textContent == "EN") {
+      if (toggleLanguage.textContent == "English") {
         // 切换到中文
         translate.changeLanguage('english'); //切换对应的中网
         translate.selectLanguageTag.refreshRender();
@@ -354,12 +344,12 @@
           //如果需要翻译完成的时候添加一个弹框,直接在这里面些就可以
         }
         // 文本变为“EN”表示下次切换
-        toggleLanguage.textContent = "CN";
-      } else if (toggleLanguage.textContent == "CN") {
+        toggleLanguage.textContent = "中文";
+      } else if (toggleLanguage.textContent == "中文") {
         translate.changeLanguage('chinese_simplified'); 
         translate.selectLanguageTag.refreshRender();
         translate.execute();//进行翻译
-        toggleLanguage.textContent = "EN"; // 文本变为“CN”
+        toggleLanguage.textContent = "English"; // 文本变为“CN”
         translate.listener.renderTaskFinish = function (task) {
         }
       }
