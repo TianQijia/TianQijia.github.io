@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Personal Homepage</title>
+    <title>Tian Qijia</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -65,7 +65,23 @@
             height: 100%;
             flex-basis: 14%;
             box-sizing: border-box;
+        }
 
+        .nav ul li button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            padding: 14px 0;
+            text-decoration: none;
+            background-color: #2ec9ef;
+            border: none;
+            border-radius: 15px; /* round shape */
+            width: 100%;
+            height: 100%;
+            flex-basis: 14%;
+            box-sizing: border-box;
         }
 
         .nav ul li a.active {
@@ -123,6 +139,19 @@
             display: inline-block;
             margin-right: 10px;
         }
+        .round-button {
+            width: 100px;
+            height: 50px;
+            font-size: 20px;
+            line-height: 42px;
+            border: 1px solid;
+            border-radius: 25%;
+            text-align: center;
+            color: #2ec9ef;
+            background-color: white;
+            /* border: none; */
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
@@ -136,13 +165,14 @@
             <li><a href="#activities">Extracurricular Activities</a></li>
             <li><a href="#skills">Skills & Languages</a></li>
             <li><a href="#appendix">Appendix</a></li>
+            <li><button id="toggleLanguage">CN</button></li>
         </ul>
     </div>
 
     <div class="header">
         <div class="info">
             <h1>Tian, Qijia</h1>
-            <p>Mobile Phone: (+852) 51283624 | Email: tianqijia2011@outlook.com</p>
+            <p>Mobile Phone: (+852) 51283624 | Email: <a href ="mailto:tianqijia2011@outlook.com">tianqijia2011@outlook.com</a></p>
             <p>Address: 3F, 397 Queen’s Road West, Hong Kong</p>
             <p>Research Interests: Computer Vision, Machine Learning, Artificial Intelligence</p>
             <p>As a passionate computer engineering graduate with a strong background in computer vision and machine learning, I aim to leverage my technical skills and research experience to develop innovative AI solutions. Seeking opportunities to contribute to cutting-edge projects and advance my career in the field of artificial intelligence.</p>
@@ -302,9 +332,39 @@
                 <a href = "./certificates.html" target="_blank">Certificates Copy</a>
             </center>
         </h3>
-        
+
     </div>
+
 </body>
+
+<script src="https://res.zvo.cn/translate/translate.js"></script>
+<script>
+    //完成的是一个通过按钮控制页面中的内容展示中文或者是英文
+    //这个可以在html直接使用.
+    //获取到按钮元素
+    let toggleLanguage = document.getElementById("toggleLanguage");
+    toggleLanguage.addEventListener("click", () => {
+      // debugger
+      if (toggleLanguage.textContent == "EN") {
+        // 切换到中文
+        translate.changeLanguage('english'); //切换对应的中网
+        translate.selectLanguageTag.refreshRender();
+        translate.execute();//进行翻译
+        translate.listener.renderTaskFinish = function (task) {
+          //如果需要翻译完成的时候添加一个弹框,直接在这里面些就可以
+        }
+        // 文本变为“EN”表示下次切换
+        toggleLanguage.textContent = "CN";
+      } else if (toggleLanguage.textContent == "CN") {
+        translate.changeLanguage('chinese_simplified'); 
+        translate.selectLanguageTag.refreshRender();
+        translate.execute();//进行翻译
+        toggleLanguage.textContent = "EN"; // 文本变为“CN”
+        translate.listener.renderTaskFinish = function (task) {
+        }
+      }
+    });
+</script>
 <script>
     // 选择所有的导航链接
     const navLinks = document.querySelectorAll('.nav ul li a');
