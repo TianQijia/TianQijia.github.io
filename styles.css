@@ -78,19 +78,19 @@ body {
 
 .nav ul li a:hover,
 .nav ul li button:hover {
-    background-color: #40c12c;
+    background-color: #40c12c; /* 点击前颜色 */
     border: 2px solid white; /* 保持白色边框 */
     box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5); /* 内阴影效果 */
 }
 
 .nav ul li a.active {
-    background-color: #c0b708;
+    background-color: #dfd519; /* 未在导航栏颜色 */
 }
 
 .nav ul li a:hover.active,
 .nav ul li button:hover.active {
-    background-color: #c0b708; /* 保持黄色背景色 */
-    border: 2px solid white; /* 保持白色边框 */
+    background-color: #158a55; /* 点击后颜色 */
+    border: 2px solid rgb(255, 255, 255); /* 保持白色边框 */
     box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5); /* 内阴影效果 */
 }
 
