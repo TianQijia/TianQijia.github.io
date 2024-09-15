@@ -5,7 +5,143 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tian Qijia</title>
     <!-- style pane -->
-    <link rel="stylesheet" href="./styles.css"> <!-- 引用外部CSS文件 -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #57cce9;
+            color: white;
+            padding: 10px;
+        }
+        .header .info {
+            flex: 1;
+            max-width: 1000px;
+        }
+        .header .photo {
+            flex: 0 0 150px;
+        }
+        .header .photo img {
+            height: 300px;
+            border-radius: 0;
+        }
+        .nav {
+            background-color: #57cce9;
+            overflow: hidden;
+            position: sticky;
+            top:0;
+            z-index: 1000;
+        }
+
+        .nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between; /* evenly distribute the buttons in a row */
+        }
+
+        .nav ul li {
+            flex: 1; /* same space for each button */
+            margin: 5px; /* same gap for each button */
+        }
+
+        .nav ul li a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            padding: 14px 0;
+            text-decoration: none;
+            background-color: #2ec9ef;
+            border-radius: 15px; /* round shape */
+            width: 100%;
+            height: 100%;
+            flex-basis: 14%;
+            box-sizing: border-box;
+        }
+
+        .nav ul li button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            padding: 14px 0;
+            text-decoration: none;
+            background-color: #2ec9ef;
+            border: none;
+            border-radius: 15px; /* round shape */
+            width: 100%;
+            height: 100%;
+            flex-basis: 14%;
+            box-sizing: border-box;
+        }
+
+        .nav ul li a.active {
+            background-color: #c0b708;
+        }
+
+        .nav ul li a:hover {
+            background-color: #40c12c;
+        }
+        .content {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .content .photo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .content .photo img {
+            width: 50%;
+            height: auto;
+        }
+
+        .content .photo .caption {
+            margin-top: 10px;
+            font-size: 14px;
+            color: #555;
+            text-align: center;
+        }
+        h2 {
+            border-bottom: 2px solid black;
+            padding-bottom: 5px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        table, th, td {
+            border: none;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border: none;
+        }
+        .bullet {
+            width: 10px;
+            height: 10px;
+            background-color: black;
+            border-radius: 50%;
+            display: inline-block;
+            margin-right: 10px;
+        }
+    </style>
 </head>
 <body>
     <!-- navigator-->
@@ -27,7 +163,7 @@
         <div class="info">
             <h1 data-en="Tian, Qijia" data-zh="田骐嘉">Tian, Qijia</h1>
             <p data-en="Mobile Phone: (+852) 51283624 | Email: tianqijia2011@outlook.com" data-zh="手机: (+852) 51283624 | 邮箱: tianqijia2011@outlook.com">Mobile Phone: (+852) 51283624 | Email: tianqijia2011@outlook.com</p>
-            <p data-en="Address: 1F, 395 Queen’s Road West, Hong Kong" data-zh="地址: 香港皇后大道西395号1楼">Address: 1F, 395 Queen’s Road West, Hong Kong</p>
+            <p data-en="Address: 3F, 397 Queen’s Road West, Hong Kong" data-zh="地址: 香港皇后大道西397号3楼">Address: 3F, 397 Queen’s Road West, Hong Kong</p>
             <p data-en="Research Interests: Computer Vision, Machine Learning, Artificial Intelligence" data-zh="研究兴趣: 计算机视觉, 机器学习, 人工智能">Research Interests: Computer Vision, Machine Learning, Artificial Intelligence</p>
             <p data-en="As a passionate computer engineering graduate with a strong background in computer vision and machine learning, I aim to leverage my technical skills and research experience to develop innovative AI solutions. Seeking opportunities to contribute to cutting-edge projects and advance my career in the field of artificial intelligence."
                data-zh="作为一名充满激情的计算机工程毕业生，我拥有扎实的计算机视觉和机器学习背景。我致力于利用我的技术技能和研究经验开发创新的人工智能解决方案。期待能够为前沿项目做出贡献，并在人工智能领域推动我的职业发展。">As a passionate computer engineering graduate with a strong background in computer vision and machine learning, I aim to leverage my technical skills and research experience to develop innovative AI solutions. Seeking opportunities to contribute to cutting-edge projects and advance my career in the field of artificial intelligence.</p>
@@ -291,50 +427,45 @@
         </ul>
         
         <!-- Appendix -->
-        <div class="extra">
-            <h2 id="appendix" data-en="APPENDIX" data-zh="附录">APPENDIX</h2>
-            <h3>
-                <div class="photo">
-                    <img src="./RMUA.jpeg" alt="RUMA Sim2Real Candidates Photos">
-                    <div class="caption" data-en="The 2022 RobotMaster Sim2Real Challenge First Prize Team" data-zh="2022机器人大师Sim2Real挑战赛一等奖团队">
-                        The 2022 RobotMaster Sim2Real Challenge First Prize Team
-                    </div>
+        <h2 id="appendix" data-en="APPENDIX" data-zh="附录">APPENDIX</h2>
+        <h3>
+            <div class="photo">
+                <img src="./RMUA.jpeg" alt="RUMA Sim2Real Candidates Photos">
+                <div class="caption" data-en="The 2022 RobotMaster Sim2Real Challenge First Prize Team" data-zh="2022机器人大师Sim2Real挑战赛一等奖团队">
+                    The 2022 RobotMaster Sim2Real Challenge First Prize Team
                 </div>
-            </h3>
-            <h3>
-                <div class="photo">
-                    <img src="./FYP.png" alt="Part of Final Year Project results">
-                    <div class="caption" data-en="Part of the results of the Final Year Project" data-zh="部分毕业设计结果">
-                        Part of the results of the Final Year Project
-                    </div>
-                </div>
-            </h3>
-            <h3>
-                <div class="photo">
-                    <img src="./presentation.png" alt="Final Year Project Presentation">
-                    <div class="caption" data-en="Final Year Project Presentation" data-zh="毕业设计展示">
-                        Final Year Project Presentation
-                    </div>
-                </div>
-            </h3>
-            <h3>
-                <center>
-                    <a href="./fyp.html" target="_blank" data-en="Senior Design Project Link" data-zh="高级设计项目链接">Senior Design Project Link</a>
-                </center>
-            </h3>
-            <h3>
-                <center>
-                    <a href="./certificates.html" target="_blank" data-en="Certificates Copy" data-zh="证书副本">Certificates Copy</a>
-                </center>
-            </h3>
-
-            <div align ="right">
-                <p id="last-updated-label" data-en="Last updated on 2024-08-16" data-zh="最近更新于 2024-08-16">Last updated on 2024-08-16</p>
-                <p data-en="Press 'h' to hide the navigation bar and 'j' to show it." data-zh="按下 'h' 键隐藏导航栏，按下 'j' 键显示导航栏。">Press 'h' to hide the navigation bar and 'a' to show it.</p>
-                <p data-en="Press 'a' to hide the appendix and 's' to show it." data-zh="按下 'a' 键隐藏附录，按下 'j' 键显示附录。">Press 'a' to hide the appendix and 's' to show it.</p>
             </div>
-        </div>
-        
+        </h3>
+        <h3>
+            <div class="photo">
+                <img src="./FYP.png" alt="Part of Final Year Project results">
+                <div class="caption" data-en="Part of the results of the Final Year Project" data-zh="部分毕业设计结果">
+                    Part of the results of the Final Year Project
+                </div>
+            </div>
+        </h3>
+        <h3>
+            <div class="photo">
+                <img src="./presentation.png" alt="Final Year Project Presentation">
+                <div class="caption" data-en="Final Year Project Presentation" data-zh="毕业设计展示">
+                    Final Year Project Presentation
+                </div>
+            </div>
+        </h3>
+        <h3>
+            <center>
+                <a href="./fyp.html" target="_blank" data-en="Senior Design Project Link" data-zh="高级设计项目链接">Senior Design Project Link</a>
+            </center>
+        </h3>
+        <h3>
+            <center>
+                <a href="./certificates.html" target="_blank" data-en="Certificates Copy" data-zh="证书副本">Certificates Copy</a>
+            </center>
+        </h3>
+
+        <p align="right">
+            <span id="last-updated-label" data-en="Last updated on 2024-08-16" data-zh="最近更新于 2024-08-16">Last updated on 2024-08-16</span>
+        </p>
 
     </div>
 
@@ -342,6 +473,7 @@
 
 <script>
     const toggleLanguageButton = document.getElementById('toggleLanguage');
+    const content = document.getElementById('content');
 
     toggleLanguageButton.addEventListener('click', () => {
         const isChinese = toggleLanguageButton.textContent === '中文';
@@ -351,6 +483,9 @@
             el.textContent = isChinese ? el.getAttribute('data-zh') : el.getAttribute('data-en');
         });
 
+        navLinks.forEach(link => {
+            link.textContent = isChinese ? link.getAttribute('data-zh') : link.getAttribute('data-en');
+        });
     });
 </script>
 
@@ -385,27 +520,4 @@
         });
     });
 </script>
-
-<script>
-    document.addEventListener('keydown', function(event) {
-        var nav = document.querySelector('.nav');
-        if (event.key === 'h') {
-            nav.style.display = 'none';
-        } else if (event.key === 'j') {
-            nav.style.display = 'block';
-        }
-    });
-</script>
-
-<script>
-    document.addEventListener('keydown', function(event) {
-        var nav = document.querySelector('.extra');
-        if (event.key === 'a') {
-            nav.style.display = 'none';
-        } else if (event.key === 's') {
-            nav.style.display = 'block';
-        }
-    });
-</script>
-
 </html>
