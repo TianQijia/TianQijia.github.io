@@ -16,7 +16,7 @@ toggleLanguageButton.addEventListener('click', () => {
 const navLinks = document.querySelectorAll('.nav ul li a');
 
 // 定义每个部分的元素及其对应的导航链接
-const sections = document.querySelectorAll('h2[id]');
+const sections = document.querySelectorAll('.section[id]');
 const sectionMap = {};
 sections.forEach(section => {
     const id = section.getAttribute('id');
@@ -29,7 +29,7 @@ window.addEventListener('scroll', () => {
     
     sections.forEach(section => {
         const sectionTop = section.offsetTop;
-        if (pageYOffset >= sectionTop - 60) {
+        if (window.scrollY >= sectionTop - 100) {
             current = section.getAttribute('id');
         }
     });
@@ -64,16 +64,25 @@ document.addEventListener('keydown', function(event) {
     }
 });
 
-// 导航栏按钮点击后保持激活状态
-document.querySelectorAll('.nav ul li a, .nav ul li button').forEach(button => {
-    button.addEventListener('click', () => {
+document.querySelectorAll('.nav ul li a').forEach(link => {
+    link.addEventListener('click', (event) => {
+        event.preventDefault(); // 阻止默认跳转行为
+        const targetId = link.getAttribute('href').substring(1);
+        const targetElement = document.getElementById(targetId);
+        
+        // 获取目标元素的顶部位置并调整
+        const offsetTop = targetElement.offsetTop - 60; // 这里的 60 是你想要的偏移量，可以根据需要调整
+
+        window.scrollTo({
+            top: offsetTop,
+            behavior: 'smooth' // 平滑滚动
+        });
+
         // 移除所有按钮的激活状态
         document.querySelectorAll('.nav ul li a, .nav ul li button').forEach(btn => {
             btn.classList.remove('active');
         });
         // 添加当前按钮的激活状态
-        button.classList.add('active');
+        link.classList.add('active');
     });
 });
-
-
