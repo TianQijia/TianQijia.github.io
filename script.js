@@ -56,11 +56,36 @@ document.addEventListener('keydown', function(event) {
 
 
 document.addEventListener('keydown', function(event) {
-    var nav = document.querySelector('.extra');
+    var nav = document.getElementById('appendix');
     if (event.key === 'a') {
         nav.style.display = 'none';
     } else if (event.key === 's') {
         nav.style.display = 'block';
+    }
+});
+
+document.addEventListener('keydown', function(event) {
+    if (event.key === 'p' || event.key === 'P') {
+        const headerElement = document.querySelector('.header');
+        const photoElement = document.querySelector('.header .photo');
+        const infoElement = document.querySelector('.header .info');
+        
+        // 切换背景颜色，文本颜色和对齐方式
+        if (headerElement.style.backgroundColor === 'white') {
+            // 恢复原来的样式
+            headerElement.style.backgroundColor = '#57cce9'; // 恢复初始背景色
+            headerElement.style.color = 'white'; // 恢复初始文本颜色
+            headerElement.style.justifyContent = 'space-between'; // 恢复左对齐
+            infoElement.style.textAlign = 'left'; // 恢复info内容左对齐
+            photoElement.style.display = 'block'; // 恢复显示照片
+        } else {
+            // 切换到简历模式的样式
+            headerElement.style.backgroundColor = 'white'; // 改为白色背景
+            headerElement.style.color = 'black'; // 改为黑色文本
+            headerElement.style.justifyContent = 'center'; // 居中对齐
+            infoElement.style.textAlign = 'center'; // 将info内容居中
+            photoElement.style.display = 'none'; // 隐藏照片
+        }
     }
 });
 
