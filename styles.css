@@ -13,20 +13,19 @@ body {
     align-items: center;
     background-color: #57cce9;
     color: white;
-    padding: 10px;
+    padding: 5px; /* 减少 padding */
 }
 
 .header .info {
     flex: 1;
-    max-width: 1000px;
 }
 
 .header .photo {
-    flex: 0 0 150px;
+    flex: 0 0 100px; /* 减少照片的占位 */
 }
 
 .header .photo img {
-    height: 300px;
+    height: 200px; /* 缩小图片 */
     border-radius: 0;
 }
 
@@ -50,7 +49,7 @@ body {
 
 .nav ul li {
     flex: 1; /* same space for each button */
-    margin: 5px; /* same gap for each button */
+    margin: 2px; /* 缩小 margin */
 }
 
 .nav ul li a,
@@ -60,49 +59,22 @@ body {
     justify-content: center;
     color: white;
     text-align: center;
-    padding: 14px 0;
+    padding: 10px 0; /* 减少 padding */
     text-decoration: none;
     background-color: #2ec9ef;
-    border-radius: 15px; /* round shape */
+    border-radius: 10px; /* 更小的圆角 */
     width: 100%;
     height: 100%;
     flex-basis: 14%;
     box-sizing: border-box;
     border: 1px solid white; /* white border */
-    transition: box-shadow 0.2s ease, transform 0.2s ease; /* transition for smooth animation */
-}
-
-.nav ul li a:active,
-.nav ul li button:active {
-    background-color: #2ec9ef; /* keep the same background color */
-    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.7); /* deeper inner shadow for pressed effect */
-    transform: translateY(2px); /* slight downward movement for pressed effect */
-}
-
-.nav ul li a:hover,
-.nav ul li button:hover {
-    background-color: #40c12c; /* 点击前颜色 */
-    border: 2px solid white; /* 保持白色边框 */
-    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5); /* 内阴影效果 */
-}
-
-.nav ul li a.active {
-    background-color: #dfd519; /* 未在导航栏颜色 */
-}
-
-.nav ul li a:hover.active,
-.nav ul li button:hover.active {
-    background-color: #158a55; /* 点击后颜色 */
-    border: 2px solid rgb(255, 255, 255); /* 保持白色边框 */
-    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5); /* 内阴影效果 */
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
 }
 
 /* 内容样式 */
 .content {
     background-color: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 5px;
 }
 
 .content .photo {
@@ -113,18 +85,71 @@ body {
 }
 
 .content .photo img {
-    width: 50%;
+    width: 40%; /* 缩小图片宽度 */
     height: auto;
 }
 
 .content .photo .caption {
-    margin-top: 10px;
-    font-size: 14px;
+    margin-top: 5px; /* 减少图片下方间距 */
+    font-size: 12px; /* 字体稍微缩小 */
     color: #555;
     text-align: center;
 }
 
+/* 适用于所有表格的样式 */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 3px; /* 缩小外边距 */
+}
+
+table, th, td {
+    border: none;
+}
+
+th, td {
+    padding: 3px; /* 减少单元格的内边距 */
+    padding-left: 30px; /* 减少左侧内边距 */
+    text-align: left;
+    border: none;
+}
+
+h2 {
+    padding-left: 10px;
+    margin: 10px; /* 缩小 margin */
+    font-size: 22px; /* 缩小字体大小 */
+    border-bottom: 2px solid black;
+}
+
+h3 {
+    padding-left: 20px;
+    margin: 3px; /* 缩小 margin */
+    font-size: 18px; /* 缩小字体大小 */
+}
+
+p {
+    padding-left: 30px;
+    margin: 3px; /* 缩小 margin */
+}
+
+ul {
+    margin: 3px; /* 缩小外边距 */
+    padding: 5px; /* 减少内边距 */
+    padding-left: 30px; /* 减少左侧内边距 */
+}
+
+/* H3 和 P 同行 */
+.h3container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+
 /* Section 样式 */
+/* 
 .section {
     background-color: white;
     margin: 10px auto;
@@ -150,22 +175,6 @@ body {
     margin-bottom: 10px;
 }
 
-.section table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-}
-
-.section table, .section th, .section td {
-    border: none;
-}
-
-.section th, .sectiontd {
-    padding: 10px;
-    text-align: left;
-    border: none;
-}
-
 .section .bullet {
     width: 10px;
     height: 10px;
@@ -174,3 +183,5 @@ body {
     display: inline-block;
     margin-right: 10px;
 }
+*/
+

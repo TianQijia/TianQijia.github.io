@@ -42,30 +42,23 @@ window.addEventListener('scroll', () => {
     });
 });
 
-
-
 document.addEventListener('keydown', function(event) {
+    var appendix = document.getElementById('appendix');
+    var activities = document.getElementById('activities');
     var nav = document.querySelector('.nav');
     if (event.key === 'h') {
+        appendix.style.display = 'none';
+        activities.style.display = 'none';
         nav.style.display = 'none';
     } else if (event.key === 'j') {
-        nav.style.display = 'block';
-    }
-});
-
-
-
-document.addEventListener('keydown', function(event) {
-    var nav = document.getElementById('appendix');
-    if (event.key === 'a') {
-        nav.style.display = 'none';
-    } else if (event.key === 's') {
+        appendix.style.display = 'block';
+        activities.style.display = 'block';
         nav.style.display = 'block';
     }
 });
 
 document.addEventListener('keydown', function(event) {
-    if (event.key === 'p' || event.key === 'P') {
+    if (event.key === '0') {
         const headerElement = document.querySelector('.header');
         const photoElement = document.querySelector('.header .photo');
         const infoElement = document.querySelector('.header .info');
