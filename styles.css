@@ -185,3 +185,85 @@ ul {
 }
 */
 
+/* Print styles for resume optimization */
+@media print {
+    body {
+        background-color: white !important;
+        font-size: 12px;
+        line-height: 1.2;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .nav {
+        display: none !important;
+    }
+    
+    .header {
+        background-color: white !important;
+        color: black !important;
+        justify-content: center !important;
+        page-break-inside: avoid;
+        margin-bottom: 10px;
+    }
+    
+    .header .info {
+        text-align: center !important;
+    }
+    
+    .header .photo {
+        display: none !important;
+    }
+    
+    .content {
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+    
+    .section {
+        page-break-inside: avoid;
+        margin-bottom: 15px;
+    }
+    
+    h2 {
+        font-size: 14px;
+        margin: 8px 0 5px 0;
+        page-break-after: avoid;
+    }
+    
+    h3 {
+        font-size: 12px;
+        margin: 5px 0 3px 0;
+        page-break-after: avoid;
+    }
+    
+    p, li {
+        font-size: 11px;
+        margin: 2px 0;
+        page-break-inside: avoid;
+    }
+    
+    ul {
+        margin: 3px 0;
+        padding-left: 15px;
+    }
+    
+    table {
+        margin: 5px 0;
+    }
+    
+    th, td {
+        padding: 2px 5px;
+        font-size: 11px;
+    }
+    
+    /* Hide appendix and activities in print by default */
+    #appendix {
+        display: none !important;
+    }
+    
+    #activities {
+        page-break-before: auto;
+    }
+}
+
