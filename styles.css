@@ -234,6 +234,7 @@ ul {
     h3 {
         font-size: 12px;
         margin: 5px 0 3px 0;
+        padding-left: 20px;
         page-break-after: avoid;
     }
     
@@ -245,7 +246,7 @@ ul {
     
     ul {
         margin: 3px 0;
-        padding-left: 15px;
+        padding-left: 40px;
     }
     
     table {
