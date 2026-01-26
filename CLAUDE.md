@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is a personal homepage/resume website for Tian Qijia, hosted on GitHub Pages. It's a static website showcasing education, projects, internships, honors, and skills with bilingual support (English/Chinese).
+This is a personal homepage/resume website for Tian Qijia, hosted on GitHub Pages. It's a static website showcasing education, projects, experience, honors, and skills with bilingual support (English/Chinese).
 
 ## Development Commands
 

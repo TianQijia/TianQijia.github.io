@@ -191,17 +191,111 @@ ul {
 }
 */
 
+/* Print mode class for toggling with '0' key */
+.resume-print-mode {
+    background-color: white !important;
+    font-size: 11.5px !important;
+    line-height: 1.2 !important;
+}
+
+.resume-print-mode .header {
+    background-color: white !important;
+    color: black !important;
+    justify-content: center !important;
+    padding: 0 !important;
+    margin-bottom: 5px !important;
+}
+
+.resume-print-mode .header .info {
+    text-align: center !important;
+}
+
+.resume-print-mode .header .info h1 {
+    font-size: 22px !important;
+    margin: 5px 0 !important;
+}
+
+.resume-print-mode .header .info p {
+    font-size: 11px !important;
+    margin: 2px 0 !important;
+    padding-left: 0 !important;
+}
+
+.resume-print-mode .header .photo,
+.resume-print-mode .nav,
+.resume-print-mode #appendix,
+.resume-print-mode .print-hide,
+.resume-print-mode #last-updated-label,
+.resume-print-mode #last-updated-label + p,
+.resume-print-mode #last-updated-label + p + p {
+    display: none !important;
+}
+
+.resume-print-mode .content {
+    padding: 5px 25px !important;
+    margin: 0 !important;
+}
+
+.resume-print-mode .section {
+    margin-bottom: 6px !important;
+}
+
+.resume-print-mode h2 {
+    font-size: 14px !important;
+    margin: 8px 0 4px 0 !important;
+    padding-left: 0 !important;
+    border-bottom: 1.5px solid black !important;
+}
+
+.resume-print-mode h3 {
+    font-size: 12px !important;
+    margin: 3px 0 1px 0 !important;
+    padding-left: 5px !important;
+}
+
+.resume-print-mode p, 
+.resume-print-mode li,
+.resume-print-mode td {
+    font-size: 10.5px !important;
+    margin: 0.5px 0 !important;
+    padding-left: 10px !important;
+}
+
+.resume-print-mode ul {
+    margin: 1px 0 !important;
+    padding-left: 20px !important;
+}
+
+.resume-print-mode table {
+    margin: 1px 0 !important;
+}
+
+.resume-print-mode th, 
+.resume-print-mode td {
+    padding: 1px 5px !important;
+}
+
+.resume-print-mode td:nth-child(2) {
+    padding-right: 5px !important;
+}
+
+.resume-print-mode .bullet {
+    width: 4px !important;
+    height: 4px !important;
+    margin-right: 5px !important;
+}
+
 /* Print styles for resume optimization */
 @media print {
     body {
         background-color: white !important;
-        font-size: 12px;
-        line-height: 1.2;
+        font-size: 10.5px;
+        line-height: 1.15;
         margin: 0;
         padding: 0;
     }
     
-    .nav {
+    .nav, .header .photo, #appendix, .print-hide, #last-updated-label, #last-updated-label + p, #last-updated-label + p + p {
         display: none !important;
     }
     
@@ -209,68 +303,63 @@ ul {
         background-color: white !important;
         color: black !important;
         justify-content: center !important;
-        page-break-inside: avoid;
-        margin-bottom: 10px;
+        margin-bottom: 5px;
     }
     
     .header .info {
         text-align: center !important;
     }
-    
-    .header .photo {
-        display: none !important;
+
+    .header .info h1 {
+        font-size: 18px;
+        margin: 4px 0;
+    }
+
+    .header .info p {
+        font-size: 10px;
+        margin: 1px 0;
+        padding-left: 0;
     }
     
     .content {
-        padding: 0 !important;
+        padding: 5px 25px !important;
         margin: 0 !important;
     }
     
     .section {
-        page-break-inside: avoid;
-        margin-bottom: 15px;
+        margin-bottom: 6px;
     }
     
     h2 {
-        font-size: 14px;
-        margin: 8px 0 5px 0;
-        page-break-after: avoid;
+        font-size: 13px;
+        margin: 8px 0 4px 0;
+        padding-left: 0;
+        border-bottom: 1.5px solid black;
     }
     
     h3 {
-        font-size: 12px;
-        margin: 5px 0 3px 0;
-        padding-left: 20px;
-        page-break-after: avoid;
+        font-size: 11.5px;
+        margin: 3px 0 1px 0;
+        padding-left: 5px;
     }
     
-    p, li {
-        font-size: 11px;
-        margin: 2px 0;
-        page-break-inside: avoid;
+    p, li, td {
+        font-size: 10px;
+        margin: 0.5px 0;
+        padding-left: 10px;
     }
     
     ul {
-        margin: 3px 0;
-        padding-left: 40px;
+        margin: 1px 0;
+        padding-left: 20px;
     }
     
     table {
-        margin: 5px 0;
+        margin: 1px 0;
     }
     
     th, td {
-        padding: 2px 5px;
-        font-size: 11px;
-    }
-    
-    /* Hide appendix and activities in print by default */
-    #appendix {
-        display: none !important;
-    }
-    
-    #activities {
-        page-break-before: auto;
+        padding: 1px 5px;
     }
 }
 

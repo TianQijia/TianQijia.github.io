@@ -59,32 +59,7 @@ document.addEventListener('keydown', function(event) {
 
 document.addEventListener('keydown', function(event) {
     if (event.key === '0') {
-        const headerElement = document.querySelector('.header');
-        const photoElement = document.querySelector('.header .photo');
-        const infoElement = document.querySelector('.header .info');
-        const bodyElement = document.body;
-        const contentElement = document.querySelector('.content');
-        
-        // 切换背景颜色，文本颜色和对齐方式
-        if (headerElement.style.backgroundColor === 'white') {
-            // 恢复原来的样式
-            headerElement.style.backgroundColor = '#57cce9'; // 恢复初始背景色
-            headerElement.style.color = 'white'; // 恢复初始文本颜色
-            headerElement.style.justifyContent = 'space-between'; // 恢复左对齐
-            infoElement.style.textAlign = 'left'; // 恢复info内容左对齐
-            photoElement.style.display = 'block'; // 恢复显示照片
-            bodyElement.style.fontSize = ''; // 恢复默认字体大小
-            contentElement.style.padding = ''; // 恢复默认padding
-        } else {
-            // 切换到简历模式的样式
-            headerElement.style.backgroundColor = 'white'; // 改为白色背景
-            headerElement.style.color = 'black'; // 改为黑色文本
-            headerElement.style.justifyContent = 'center'; // 居中对齐
-            infoElement.style.textAlign = 'center'; // 将info内容居中
-            photoElement.style.display = 'none'; // 隐藏照片
-            bodyElement.style.fontSize = '14px'; // 调整字体大小适合打印
-            contentElement.style.padding = '10px'; // 减小padding适合打印
-        }
+        document.body.classList.toggle('resume-print-mode');
     }
 });
 
