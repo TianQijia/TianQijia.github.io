@@ -1,35 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="en"><head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tian Qijia</title>
     <!-- style pane -->
     <link rel="stylesheet" href="./styles.css"> <!-- 引用外部CSS文件 -->
-</head>
-<body>
+<style>
+  .imageye-selected {
+    outline: 2px solid black !important;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5) !important;
+  }
+</style><style id="monica-reading-highlight-style">
+        .monica-reading-highlight {
+          animation: fadeInOut 1.5s ease-in-out;
+        }
+
+        @keyframes fadeInOut {
+          0%, 100% { background-color: transparent; }
+          30%, 70% { background-color: rgba(2, 118, 255, 0.20); }
+        }
+      </style></head>
+<body monica-id="ofpnmcalabcbjgholdjcjblkibolbppb" monica-version="9.0.6" class="edit-mode-enabled">
     <!-- navigator-->
     <div class="nav">
         <ul>
-            <li><a href="#education" data-en="Education" data-zh="教育背景">Education</a></li>
-            <li><a href="#projects" data-en="Projects" data-zh="项目经历">Projects</a></li>
-            <li><a href="#experience" data-en="Experience" data-zh="工作经历">Experience</a></li>
-            <li><a href="#honors" data-en="Honors & Awards" data-zh="荣誉奖项">Honors & Awards</a></li>
-            <li><a href="#publications" data-en="Publications & Patents" data-zh="学术成果">Publications & Patents</a></li>
-            <li><a href="#activities" data-en="Extracurricular Activities" data-zh="课外活动">Extracurricular Activities</a></li>
-            <li><a href="#skills" data-en="Skills & Languages" data-zh="技能与语言">Skills & Languages</a></li>
-            <li><a href="#appendix" data-en="Appendix" data-zh="附录">Appendix</a></li>
-            <li><button id="toggleLanguage">中文</button></li>
+            <li><a href="#education" data-en="Education" data-zh="教育背景" class="">Education</a></li>
+            <li><a href="#projects" data-en="Projects" data-zh="项目经历" class="">Projects</a></li>
+            <li><a href="#experience" data-en="Experience" data-zh="工作经历" class="">Experience</a></li>
+            <li><a href="#honors" data-en="Honors &amp; Awards" data-zh="荣誉奖项" class="">Honors &amp; Awards</a></li>
+            <li><a href="#publications" data-en="Publications &amp; Patents" data-zh="学术成果" class="">Publications &amp; Patents</a></li>
+            <li><a href="#activities" data-en="Extracurricular Activities" data-zh="课外活动" class="">Extracurricular Activities</a></li>
+            <li><a href="#skills" data-en="Skills &amp; Languages" data-zh="技能与语言" class="">Skills &amp; Languages</a></li>
+            <li><a href="#appendix" data-en="Appendix" data-zh="附录" class="">Appendix</a></li>
+            <li><button id="toggleLanguage">English</button></li>
         </ul>
     </div>
 
     <!-- header -->
     <div class="header">
         <div class="info">
-            <h1 data-en="Tian, Qijia" data-zh="田骐嘉">Tian, Qijia</h1>
-            <p data-en="Mobile Phone: (+852) 51283624 | Email: tianqijia2011@outlook.com" data-zh="手机: (+852) 51283624 | 邮箱: tianqijia2011@outlook.com">Mobile Phone: (+852) 51283624 | Email: tianqijia2011@outlook.com</p>
-            <p data-en="Address: 1F, 395 Queen’s Road West, Hong Kong" data-zh="地址: 香港皇后大道西395号1楼">Address: 1F, 395 Queen’s Road West, Hong Kong</p>
-            <p data-en="Research Interests: Computer Vision, Machine Learning, Artificial Intelligence" data-zh="研究兴趣: 计算机视觉, 机器学习, 人工智能">Research Interests: Computer Vision, Machine Learning, Artificial Intelligence</p>
+            <h1 data-en="Tian, Qijia" data-zh="田骐嘉" class="">Tian, Qijia</h1>
+            <p data-en="Mobile Phone: (+852) 51283624 | Email: tianqijia2011@outlook.com" data-zh="手机: (+852) 51283624 | 邮箱: tianqijia2011@outlook.com" class="">Mobile Phone: (+852) 51283624 | Email: tianqijia2011@outlook.com</p>
+            <p data-en="Address: 1F, 395 Queen’s Road West, Hong Kong" data-zh="地址: 香港皇后大道西395号1楼" class="">Address: 1F, 395 Queen’s Road West, Hong Kong</p>
+            <p data-en="Research Interests: Computer Vision, Machine Learning, Artificial Intelligence" data-zh="研究兴趣: 计算机视觉, 机器学习, 人工智能" class="">Research Interests: Computer Vision, Machine Learning, Artificial Intelligence</p>
             <!--
             <p data-en="As a computer engineering graduate with a strong background in computer vision and machine learning, I aim to use my skills to create AI solutions. Seeking opportunities to contribute to innovative projects and grow in AI."
                 data-zh="作为拥有计算机视觉和机器学习背景的计算机工程毕业生，我致力于利用技能开发AI解决方案。期待参与创新项目并在AI领域成长。">As a computer engineering graduate with a strong background in computer vision and machine learning, I aim to use my skills to create AI solutions. Seeking opportunities to contribute to innovative projects and grow in AI.</p>
@@ -43,142 +56,90 @@
     <div class="content">
         <!-- education background -->
         <div class="section" id="education">
-            <h2 data-en="EDUCATION" data-zh="教育背景">EDUCATION</h2>
-            <h3 data-en="The University of Hong Kong, Sept 2024 - Nov 2025;" data-zh="香港大学, 2024年9月 - 2025年11月;">The University of Hong Kong, Sept 2024 - Nov 2025;</h3>
-            <p data-en="Msc in Computer Science, HKU, with distinction, GPA: 3.58/4.3;" data-zh="香港大学计算机科学硕士, 以优异成绩毕业, GPA: 3.58/4.3;">Msc in Computer Science, HKU, with distinction, GPA: 3.58/4.3;</p>
-            <p data-en="Courses: Natural Language Processing (A); Introduction to Unmanned Systems (A-); Big Data Management (A-)." data-zh="课程: 自然语言处理 (A); 无人系统导论 (A-); 大数据管理 (A-);">Courses: Natural Language Processing (A); Introduction to Unmanned Systems (A-); Big Data Management (A-).</p>
+            <h2 data-en="EDUCATION" data-zh="教育背景" class="">EDUCATION</h2>
+            <div class="h3container">
+                <h3 data-en="The University of Hong Kong" data-zh="香港大学" class="">The University of Hong Kong</h3>
+                <p data-en="Sept 2024 - Nov 2025" data-zh="2024年9月 - 2025年11月" class="">Sept 2024 - Nov 2025</p>
+            </div>
+            <ul>
+                <li data-en="Msc in Computer Science, HKU, with distinction, GPA: 3.58/4.3;" data-zh="香港大学计算机科学硕士, 以优异成绩毕业, GPA: 3.58/4.3;" class="">Msc in Computer Science, HKU, with distinction, GPA: 3.58/4.3;</li>
+                <li data-en="Courses: Natural Language Processing (A); Introduction to Unmanned Systems (A-); Big Data Management (A-)." data-zh="课程: 自然语言处理 (A); 无人系统导论 (A-); 大数据管理 (A-)。" class="" data-listener-added_c098f68c="true">Courses: Natural Language Processing (A); Introduction to Unmanned Systems (A-); Big Data Management (A-).</li>
+            </ul>
 
-            <h3 data-en="The University of Hong Kong, Sept 2020 - June 2024" data-zh="香港大学, 2020年9月 - 2024年6月">The University of Hong Kong, Sept 2020 - June 2024</h3>
-            <p data-en="BENG in Computer Engineering, HKU, with First Class Honor, GPA: 3.77/4.3, Rank: 1/52;" data-zh="香港大学计算机工程学士, 一等荣誉学位, GPA: 3.77/4.3, 排名：1/52;">BENG in Computer Engineering, HKU, with First Class Honor, GPA: 3.77/4.3, Rank: 1/52;</p>
-            <p data-en="Courses: Senior Design Project (A-); Introduction to Deep Learning for Computer Vision (A+); Algoirithm Design (A); Digital System Design (A+); Computer Architecture (A); Control System I (A+); Probabilistic System Analysis (A+); Signal and Linear Systems (A-)." 
-            data-zh="课程: 毕业设计项目 (A-); 计算机视觉深度学习简介 (A+); 算法设计 (A); 数字系统设计 (A+); 计算机架构 (A); 控制系统 I (A+); 概率系统分析 (A+); 信号与线性系统 (A-).">Courses: Senior Design Project (A-); Introduction to Deep Learning for Computer Vision (A+); Algoirithm Design (A); Digital System Design (A+); Computer Architecture (A); Control System I (A+); Probabilistic System Analysis (A+); Signal and Linear Systems (A-).</p>
+            <div class="h3container">
+                <h3 data-en="The University of Hong Kong" data-zh="香港大学" class="">The University of Hong Kong</h3>
+                <p data-en="Sept 2020 - June 2024" data-zh="2020年9月 - 2024年6月" class="">Sept 2020 - June 2024</p>
+            </div>
+            <ul>
+                <li data-en="BENG in Computer Engineering, HKU, with First Class Honor, GPA: 3.77/4.3, Rank: 1/52;" data-zh="香港大学计算机工程学士, 一等荣誉学位, GPA: 3.77/4.3, 排名：1/52;" class="">BENG in Computer Engineering, HKU, with First Class Honor, GPA: 3.77/4.3, Rank: 1/52;</li>
+                <li data-en="Courses: Senior Design Project (A-); Introduction to Deep Learning for Computer Vision (A+); Algoirithm Design (A); Digital System Design (A+); Computer Architecture (A); Control System I (A+); Probabilistic System Analysis (A+); Signal and Linear Systems (A-)." data-zh="课程: 毕业设计项目 (A-); 计算机视觉深度学习简介 (A+); 算法设计 (A); 数字系统设计 (A+); 计算机架构 (A); 控制系统 I (A+); 概率系统分析 (A+); 信号与线性系统 (A-)。" class="" data-listener-added_c098f68c="true">Courses: Senior Design Project (A-); Introduction to Deep Learning for Computer Vision (A+); Algoirithm Design (A); Digital System Design (A+); Computer Architecture (A); Control System I (A+); Probabilistic System Analysis (A+); Signal and Linear Systems (A-).</li>
+            </ul>
         </div>
         
         <!-- project experience -->
         <div class="section" id="projects">
-            <h2 data-en="PROJECT EXPERIENCE" data-zh="项目经历">PROJECT EXPERIENCE</h2>
+            <h2 data-en="PROJECT EXPERIENCE" data-zh="项目经历" class="">PROJECT EXPERIENCE</h2>
 
             <div class="h3container">
-                <h3 data-en="Developer, VulkanECS Game Engine - MSc Group Project, Hong Kong" data-zh="开发者, VulkanECS游戏引擎 - 团队毕设项目, 香港">
-                    Developer, VulkanECS Game Engine - MSc Group Project, Hong Kong
-                </h3>
-                <p data-en="2025.02-2025.07" data-zh="2025.02-2025.07">2025.02-2025.07</p>
+                <h3 data-en="Developer, VulkanECS Game Engine - MSc Group Project, Hong Kong" data-zh="开发者, VulkanECS游戏引擎 - 团队毕设项目, 香港" class="">Developer, VulkanECS Game Engine - MSc Group Project, Hong Kong</h3>
+                <p data-en="2025.02-2025.07" data-zh="2025.02-2025.07" class="">2025.02-2025.07</p>
             </div>
             <ul>
-                <li data-en="Architected and implemented high-performance Entity Component System (ECS) with archetype-based entity management, supporting 10,000+ entities at 100+ FPS;" data-zh="架构并实现了基于原型的高性能实体组件系统(ECS)，支持10,000+实体在100+ FPS下运行;">
-                    Architected and implemented high-performance Entity Component System (ECS) with archetype-based entity management, supporting 10,000+ entities at 100+ FPS;
-                </li>
-                <li data-en="Designed efficient ECS query and iteration mechanisms optimized for cache performance and scalability;" data-zh="设计高效的ECS查询和迭代机制，针对缓存性能和可扩展性进行优化;">
-                    Designed efficient ECS query and iteration mechanisms optimized for cache performance and scalability;
-                </li>
-                <li data-en="Developed comprehensive sample game demonstration (3D vampire survivor style) showcasing engine capabilities;" data-zh="开发了全面的示例游戏演示（3D吸血鬼幸存者风格），展示引擎功能;">
-                    Developed comprehensive sample game demonstration (3D vampire survivor style) showcasing engine capabilities;
-                </li>
-                <li data-en="Led system testing and performance optimization, contributing 25% of overall project development;" data-zh="主导系统测试和性能优化，贡献了项目总体开发的25%;">
-                    Led system testing and performance optimization, contributing 25% of overall project development;
-                </li>
+                <li data-en="Architected and implemented high-performance Entity Component System (ECS) with archetype-based entity management, supporting 10,000+ entities at 100+ FPS;" data-zh="架构并实现了基于原型的高性能实体组件系统(ECS)，支持10,000+实体在100+ FPS下运行;" class="">Architected and implemented high-performance Entity Component System (ECS) with archetype-based entity management, supporting 10,000+ entities at 100+ FPS;</li>
+                <li data-en="Designed efficient ECS query and iteration mechanisms optimized for cache performance and scalability;" data-zh="设计高效的ECS查询和迭代机制，针对缓存性能和可扩展性进行优化;" class="">Designed efficient ECS query and iteration mechanisms optimized for cache performance and scalability;</li>
+                <li data-en="Developed comprehensive sample game demonstration (3D vampire survivor style) showcasing engine capabilities;" data-zh="开发了全面的示例游戏演示（3D吸血鬼幸存者风格），展示引擎功能;" class="">Developed comprehensive sample game demonstration (3D vampire survivor style) showcasing engine capabilities;</li>
+                <li data-en="Led system testing and performance optimization, contributing 25% of overall project development;" data-zh="主导系统测试和性能优化，贡献了项目总体开发的25%。" class="" data-listener-added_c098f68c="true">Led system testing and performance optimization, contributing 25% of overall project development;</li>
             </ul>
 
             <div class="h3container">
-                <h3 data-en="Developer, FridayDoc - Modular AI Research Assistant Framework, Group Project" data-zh="开发者, FridayDoc - 模块化AI研究助手框架, 团队项目">
-                    Developer, FridayDoc - Modular AI Research Assistant Framework, Group Project
-                </h3>
-                <p data-en="2024.11-2024.12" data-zh="2024.11-2024.12">2024.11-2024.12</p>
-            </div>
+                <h3 data-en="Developer, FridayDoc - Modular AI Research Assistant Framework, Group Project" data-zh="开发者, FridayDoc - 模块化AI研究助手框架, 团队项目" class="" data-listener-added_c098f68c="true">Developer, FridayDoc - Modular AI Research Assistant Framework, Group Project</h3>
+                <p data-en="2024.11-2024.12" data-zh="2024.11-2024.12" class="">2024.11-2024.12</p>
+            <span id="monica-writing-entry-btn-root" style="position: absolute; left: 0px; top: 0px; pointer-events: none;"></span></div>
             <ul>
-                <li data-en="Developed a modular AI research assistant framework enhancing OS-Copilot with script-based architecture;" data-zh="开发了基于脚本架构的模块化AI研究助手框架，增强OS-Copilot功能;">
-                    Developed a modular AI research assistant framework enhancing OS-Copilot with script-based architecture;
-                </li>
-                <li data-en="Implemented hierarchical documentation system combining high-level tool menus and detailed guides;" data-zh="实现了结合高级工具菜单和详细指南的分层文档系统;">
-                    Implemented hierarchical documentation system combining high-level tool menus and detailed guides;
-                </li>
-                <li data-en="Created platform integrations for Hugging Face, GitHub, and X (Twitter) for automated data retrieval;" data-zh="为Hugging Face、GitHub和X（Twitter）创建平台集成，实现自动数据检索;">
-                    Created platform integrations for Hugging Face, GitHub, and X (Twitter) for automated data retrieval;
-                </li>
-                <li data-en="Designed content filtering system to reduce irrelevant information in LLM prompts;" data-zh="设计了内容过滤系统，减少LLM提示中的无关信息;">
-                    Designed content filtering system to reduce irrelevant information in LLM prompts;
-                </li>
-                <li data-en="Improved task decomposition accuracy through dynamic tool selection;" data-zh="通过动态工具选择提高了任务分解的准确性;">
-                    Improved task decomposition accuracy through dynamic tool selection;
-                </li>
-                <li data-en="Validated framework usability through case studies and prompt engineering." data-zh="通过案例研究和提示工程验证了框架的可用性。">
-                    Validated framework usability through case studies and prompt engineering.
-                </li>
+                <li data-en="Developed a modular AI research assistant framework enhancing OS-Copilot with script-based architecture;" data-zh="开发了基于脚本架构的模块化AI研究助手框架，增强OS-Copilot功能;" class="">Developed a modular AI research assistant framework enhancing OS-Copilot with script-based architecture;</li>
+                <li data-en="Implemented hierarchical documentation system combining high-level tool menus and detailed guides;" data-zh="实现了结合高级工具菜单和详细指南的分层文档系统;" class="">Implemented hierarchical documentation system combining high-level tool menus and detailed guides;</li>
+                <li data-en="Created platform integrations for Hugging Face, GitHub, and X (Twitter) for automated data retrieval;" data-zh="为Hugging Face、GitHub和X（Twitter）创建平台集成，实现自动数据检索;" class="">Created platform integrations for Hugging Face, GitHub, and X (Twitter) for automated data retrieval;</li>
+                <li data-en="Designed content filtering system to reduce irrelevant information in LLM prompts;" data-zh="设计了内容过滤系统，减少LLM提示中的无关信息;" class="">Designed content filtering system to reduce irrelevant information in LLM prompts;</li>
+                <li data-en="Improved task decomposition accuracy through dynamic tool selection;" data-zh="通过动态工具选择提高了任务分解的准确性;" class="">Improved task decomposition accuracy through dynamic tool selection;</li>
+                <li data-en="Validated framework usability through case studies and prompt engineering." data-zh="通过案例研究和提示工程验证了框架的可用性。" class="">Validated framework usability through case studies and prompt engineering.</li>
             </ul>
 
             <div class="h3container">
-                <h3 data-en="Developer, Senior Design Project - Explainable Machine Learning Algorithm and Hardware For Surgical Robot, Hong Kong" data-zh="开发者, 高级设计项目 - 可解释的机器学习算法和外科机器人硬件, 香港">
-                    Developer, Senior Design Project - Explainable Machine Learning Algorithm and Hardware For Surgical Robot, Hong Kong
-                </h3>
-                <p data-en="2023.09-2024.04" data-zh="2023.09-2024.04">2023.09-2024.04</p>
+                <h3 data-en="Developer, Senior Design Project - Explainable Machine Learning Algorithm and Hardware For Surgical Robot, Hong Kong" data-zh="开发者, 高级设计项目 - 可解释的机器学习算法和外科机器人硬件, 香港" class="">Developer, Senior Design Project - Explainable Machine Learning Algorithm and Hardware For Surgical Robot, Hong Kong</h3>
+                <p data-en="2023.09-2024.04" data-zh="2023.09-2024.04" class="">2023.09-2024.04</p>
             </div>
             <ul>
-                <li data-en="Developed an efficient AI segmentation method for breast tumors with focus on interpretability;" data-zh="开发了高效的乳腺肿瘤AI分割方法，注重可解释性;">
-                    Developed an efficient AI segmentation method for breast tumors with focus on interpretability;
-                </li>
-                <li data-en="Implemented Attention UNet for accurate segmentation under computational constraints;" data-zh="在计算受限情况下实现了高精度的Attention UNet分割;">
-                    Implemented Attention UNet for accurate segmentation under computational constraints;
-                </li>
-                <li data-en="Handled data preprocessing, model training, and evaluation;" data-zh="负责数据预处理、模型训练和评估;">
-                    Handled data preprocessing, model training, and evaluation;
-                </li>
-                <li data-en="Achieved stable tumor segmentation, IoU indicated room for improvement;" data-zh="乳腺肿瘤分割稳定，但IoU显示改进空间;">
-                    Achieved stable tumor segmentation, IoU indicated room for improvement;
-                </li>
-                <li data-en="Developed surgical robot hardware prototype with motor control and real-time processing;" data-zh="开发了带有电机控制和实时处理功能的外科机器人硬件原型;">
-                    Developed surgical robot hardware prototype with motor control and real-time processing;
-                </li>
-                <li data-en="Suggested further research for better model interpretability across imaging modalities." data-zh="建议进一步研究以提高模型可解释性并扩展其在影像中的应用。">
-                    Suggested further research for better model interpretability across imaging modalities.
-                </li>
+                <li data-en="Developed an efficient AI segmentation method for breast tumors with focus on interpretability;" data-zh="开发了高效的乳腺肿瘤AI分割方法，注重可解释性;" class="">Developed an efficient AI segmentation method for breast tumors with focus on interpretability;</li>
+                <li data-en="Implemented Attention UNet for accurate segmentation under computational constraints;" data-zh="在计算受限情况下实现了高精度的Attention UNet分割;" class="">Implemented Attention UNet for accurate segmentation under computational constraints;</li>
+                <li data-en="Handled data preprocessing, model training, and evaluation;" data-zh="负责数据预处理、模型训练和评估;" class="">Handled data preprocessing, model training, and evaluation;</li>
+                <li data-en="Achieved stable tumor segmentation, IoU indicated room for improvement;" data-zh="乳腺肿瘤分割稳定，但IoU显示改进空间;" class="">Achieved stable tumor segmentation, IoU indicated room for improvement;</li>
+                <li data-en="Developed surgical robot hardware prototype with motor control and real-time processing;" data-zh="开发了带有电机控制和实时处理功能的外科机器人硬件原型;" class="">Developed surgical robot hardware prototype with motor control and real-time processing;</li>
+                <li data-en="Suggested further research for better model interpretability across imaging modalities." data-zh="建议进一步研究以提高模型可解释性并扩展其在影像中的应用。" class="">Suggested further research for better model interpretability across imaging modalities.</li>
             </ul>
 
             <div class="h3container print-hide">
-                <h3 data-en="Research Assistant, AI-Powered Smart Petition Management System, Ningbo" data-zh="研究助理, AI驱动智能信访管理系统, 宁波">
-                    Research Assistant, AI-Powered Smart Petition Management System, Ningbo
-                </h3>
-                <p data-en="2022.01-2022.12" data-zh="2022.01-2022.12">2022.01-2022.12</p>
+                <h3 data-en="Research Assistant, AI-Powered Smart Petition Management System, Ningbo" data-zh="研究助理, AI驱动智能信访管理系统, 宁波" class="">Research Assistant, AI-Powered Smart Petition Management System, Ningbo</h3>
+                <p data-en="2022.01-2022.12" data-zh="2022.01-2022.12" class="">2022.01-2022.12</p>
             </div>
             <ul class="print-hide">
-                <li data-en="Developed an AI system to streamline petition management with data analytics and automation;" data-zh="开发了一个集成数据分析和自动化的AI系统，以简化信访管理;">
-                    Developed an AI system to streamline petition management with data analytics and automation;
-                </li>
-                <li data-en="Classified over 700 types of petition work orders with high accuracy;" data-zh="对700多种信访工单进行高精度分类;">
-                    Classified over 700 types of petition work orders with high accuracy;
-                </li>
-                <li data-en="Integrated data from petition records, historical cases, and policy data to enhance workflow;" data-zh="集成信访记录、历史案件和政策数据，以优化工作流程;">
-                    Integrated data from petition records, historical cases, and policy data to enhance workflow;
-                </li>
-                <li data-en="Played a key role in algorithm design and model framework development;" data-zh="在算法设计和模型框架开发中发挥了关键作用;">
-                    Played a key role in algorithm design and model framework development;
-                </li>
+                <li data-en="Developed an AI system to streamline petition management with data analytics and automation;" data-zh="开发了一个集成数据分析和自动化的AI系统，以简化信访管理;" class="">Developed an AI system to streamline petition management with data analytics and automation;</li>
+                <li data-en="Classified over 700 types of petition work orders with high accuracy;" data-zh="对700多种信访工单进行高精度分类;" class="">Classified over 700 types of petition work orders with high accuracy;</li>
+                <li data-en="Integrated data from petition records, historical cases, and policy data to enhance workflow;" data-zh="集成信访记录、历史案件和政策数据，以优化工作流程;" class="">Integrated data from petition records, historical cases, and policy data to enhance workflow;</li>
+                <li data-en="Played a key role in algorithm design and model framework development;" data-zh="在算法设计和模型框架开发中发挥了关键作用。" class="" data-listener-added_c098f68c="true">Played a key role in algorithm design and model framework development;</li>
             </ul>
 
 
             <div class="h3container print-hide">
-                <h3 data-en="Research Assistant, Research on Intelligent Maintenance and Irrigation Techniques for Elevated Greenery along Waterfronts, Ningbo" data-zh="研究助理, 高架绿化智能维护和灌溉技术研究, 宁波">
-                    Research Assistant, Research on Intelligent Maintenance and Irrigation Techniques for Elevated Greenery along Waterfronts, Ningbo</h3>
-                <p data-en="2021.12-2022.06" data-zh="2021.12-2022.06">2021.12-2022.06</p>
+                <h3 data-en="Research Assistant, Research on Intelligent Maintenance and Irrigation Techniques for Elevated Greenery along Waterfronts, Ningbo" data-zh="研究助理, 高架绿化智能维护和灌溉技术研究, 宁波" class="">Research Assistant, Research on Intelligent Maintenance and Irrigation Techniques for Elevated Greenery along Waterfronts, Ningbo</h3>
+                <p data-en="2021.12-2022.06" data-zh="2021.12-2022.06" class="">2021.12-2022.06</p>
             </div>
             <ul class="print-hide">
-                <li data-en="Developed an IoT-enabled intelligent irrigation solution for elevated greenery to optimize water usage;" data-zh="开发了基于物联网的高架绿化智能灌溉方案，优化用水量;">
-                    Developed an IoT-enabled intelligent irrigation solution for elevated greenery to optimize water usage;
-                </li>
-                <li data-en="Implemented a Transformer-based model for accurate, on-demand water prediction;" data-zh="实施了基于Transformer的模型，实现精确的按需灌溉预测;">
-                    Implemented a Transformer-based model for accurate, on-demand water prediction;
-                </li>
-                <li data-en="Used encoder-decoder architecture to enhance prediction accuracy;" data-zh="利用编码器-解码器架构提高预测精度;">
-                    Used encoder-decoder architecture to enhance prediction accuracy;
-                </li>
-                <li data-en="Trained predictive models with historical environmental data for real-world use;" data-zh="用历史环境数据训练预测模型，应用于实际场景;">
-                    Trained predictive models with historical environmental data for real-world use;
-                </li>
-                <li data-en="Designed a system that reduces workload and detects faults, lowering plant mortality;" data-zh="设计了减少工作量并检测故障的系统，降低了植物死亡率;">
-                    Designed a system that reduces workload and detects faults, lowering plant mortality;
-                </li>
-                <li data-en="Led requirements gathering, algorithm research, and IoT sensor setup;" data-zh="负责需求收集、算法研究及物联网传感器安装;">
-                    Led requirements gathering, algorithm research, and IoT sensor setup;
-                </li>
+                <li data-en="Developed an IoT-enabled intelligent irrigation solution for elevated greenery to optimize water usage;" data-zh="开发了基于物联网的高架绿化智能灌溉方案，优化用水量;" class="">Developed an IoT-enabled intelligent irrigation solution for elevated greenery to optimize water usage;</li>
+                <li data-en="Implemented a Transformer-based model for accurate, on-demand water prediction;" data-zh="实施了基于Transformer的模型，实现精确的按需灌溉预测;" class="">Implemented a Transformer-based model for accurate, on-demand water prediction;</li>
+                <li data-en="Used encoder-decoder architecture to enhance prediction accuracy;" data-zh="利用编码器-解码器架构提高预测精度;" class="">Used encoder-decoder architecture to enhance prediction accuracy;</li>
+                <li data-en="Trained predictive models with historical environmental data for real-world use;" data-zh="用历史环境数据训练预测模型，应用于实际场景;" class="">Trained predictive models with historical environmental data for real-world use;</li>
+                <li data-en="Designed a system that reduces workload and detects faults, lowering plant mortality;" data-zh="设计了减少工作量并检测故障的系统，降低了植物死亡率;" class="">Designed a system that reduces workload and detects faults, lowering plant mortality;</li>
+                <li data-en="Led requirements gathering, algorithm research, and IoT sensor setup;" data-zh="负责需求收集、算法研究及物联网传感器安装。" class="" data-listener-added_c098f68c="true">Led requirements gathering, algorithm research, and IoT sensor setup;</li>
             </ul>
         </div>
         
@@ -186,218 +147,165 @@
 
         <!-- work experience -->
         <div class="section" id="experience">
-            <h2 data-en="EXPERIENCE" data-zh="工作经历">EXPERIENCE</h2>
+            <h2 data-en="EXPERIENCE" data-zh="工作经历" class="">EXPERIENCE</h2>
             <div class="h3container">
-                <h3 data-en="Deep Research Engineer, NewPraya AI Limited, Hong Kong" data-zh="深度研究工程师, NewPraya AI Limited, 香港">
-                    Deep Research Engineer, NewPraya AI Limited, Hong Kong
-                </h3>
-                <p data-en="2025.08-Present" data-zh="2025.08-至今">2025.08-Present</p>
+                <h3 data-en="Deep Research Engineer, NewPraya AI Limited, Hong Kong" data-zh="深度研究工程师, NewPraya AI Limited, 香港" class="">Deep Research Engineer, NewPraya AI Limited, Hong Kong</h3>
+                <p data-en="2025.08-Present" data-zh="2025.08-至今" class="">2025.08-Present</p>
             </div>
             
             <ul>
-                <li data-en="Prototype development and testing of full-link medical workflows;" data-zh="全链路医疗流程的原型开发和测试;">
-                    Prototype development and testing of full-link medical workflows;
-                </li>
-                <li data-en="Implementation of medical OCR and medical auditing systems;" data-zh="实现医疗OCR及医疗审计系统;">
-                    Implementation of medical OCR and medical auditing systems;
-                </li>
-                <li data-en="Development of Clinical Decision Support Systems (CDSS) and other medical AI solutions." data-zh="开发医疗辅助决策系统 (CDSS) 及其他医疗AI解决方案。">
-                    Development of Clinical Decision Support Systems (CDSS) and other medical AI solutions.
-                </li>
+                <li data-en="Prototype development and testing of full-link medical workflows;" data-zh="全链路医疗流程的原型开发和测试;" class="">Prototype development and testing of full-link medical workflows;</li>
+                <li data-en="Implementation of medical OCR and medical auditing systems;" data-zh="实现医疗OCR及医疗审计系统;" class="">Implementation of medical OCR and medical auditing systems;</li>
+                <li data-en="Development of Clinical Decision Support Systems (CDSS) and other medical AI solutions." data-zh="开发医疗辅助决策系统 (CDSS) 及其他医疗AI解决方案。" class="">Development of Clinical Decision Support Systems (CDSS) and other medical AI solutions.</li>
             </ul>
 
             <div class="h3container">
-                <h3 data-en="Fintech Intern, China Construction Bank Corporation, Ningbo" data-zh="金融科技实习生, 中国建设银行股份有限公司, 宁波">
-                    Fintech Intern, China Construction Bank Corporation, Ningbo
-                </h3>
-                <p data-en="2023.07-2023.08" data-zh="2023.07-2023.08">2023.07-2023.08</p>
+                <h3 data-en="Fintech Intern, China Construction Bank Corporation, Ningbo" data-zh="金融科技实习生, 中国建设银行股份有限公司, 宁波" class="">Fintech Intern, China Construction Bank Corporation, Ningbo</h3>
+                <p data-en="2023.07-2023.08" data-zh="2023.07-2023.08" class="">2023.07-2023.08</p>
             </div>
             
             <ul>
-                <li data-en="Tested websites and systems using Jmeter and Python;" data-zh="使用Jmeter和Python进行网站和系统测试;">
-                    Tested websites and systems using Jmeter and Python;
-                </li>
-                <li data-en="Worked with the development team to resolve software issues and optimize platform functionality;" data-zh="与开发团队合作解决软件问题并优化平台功能;">
-                    Worked with the development team to resolve software issues and optimize platform functionality;
-                </li>
-                <li data-en="Analyzed user feedback and usage data to recommend UX improvements;" data-zh="分析用户反馈和使用数据，提出用户体验改进建议;">
-                    Analyzed user feedback and usage data to recommend UX improvements;
-                </li>
-                <li data-en="Engaged with senior developers and fintech experts to learn industry trends." data-zh="与高级开发人员和金融科技专家交流，了解行业趋势;">
-                    Engaged with senior developers and fintech experts to learn industry trends;
-                </li>
+                <li data-en="Tested websites and systems using Jmeter and Python;" data-zh="使用Jmeter和Python进行网站和系统测试;" class="">Tested websites and systems using Jmeter and Python;</li>
+                <li data-en="Worked with the development team to resolve software issues and optimize platform functionality;" data-zh="与开发团队合作解决软件问题并优化平台功能;" class="">Worked with the development team to resolve software issues and optimize platform functionality;</li>
+                <li data-en="Analyzed user feedback and usage data to recommend UX improvements;" data-zh="分析用户反馈和使用数据，提出用户体验改进建议;" class="">Analyzed user feedback and usage data to recommend UX improvements;</li>
+                <li data-en="Engaged with senior developers and fintech experts to learn industry trends." data-zh="与高级开发人员和金融科技专家交流，了解行业趋势。" class="" data-listener-added_c098f68c="true">Engaged with senior developers and fintech experts to learn industry trends.</li>
             </ul>
 
             <div class="h3container">
-                <h3 data-en="Software and Hardware Development Intern, Ningbo Zhongda Leader Intelligent Transmission Co., Ltd., Ningbo" data-zh="软硬件开发实习生, 宁波中大力德智能传动有限公司, 宁波">
-                    Software and Hardware Development Intern, Ningbo Zhongda Leader Intelligent Transmission Co., Ltd., Ningbo
-                </h3>
-                <p data-en="2023.06-2023.07" data-zh="2023.06-2023.07">2023.06-2023.07</p>
+                <h3 data-en="Software and Hardware Development Intern, Ningbo Zhongda Leader Intelligent Transmission Co., Ltd., Ningbo" data-zh="软硬件开发实习生, 宁波中大力德智能传动有限公司, 宁波" class="">Software and Hardware Development Intern, Ningbo Zhongda Leader Intelligent Transmission Co., Ltd., Ningbo</h3>
+                <p data-en="2023.06-2023.07" data-zh="2023.06-2023.07" class="">2023.06-2023.07</p>
             </div>
             
             <ul>
-                <li data-en="Involved in motor manufacturing, design, and testing;" data-zh="参与电机制造、设计和测试;">
-                    Involved in motor manufacturing, design, and testing;
-                </li>
-                <li data-en="Collaborated on motor component design and prototyping to improve performance;" data-zh="合作设计和制作电机组件，提升性能;">
-                    Collaborated on motor component design and prototyping to improve performance;
-                </li>
-                <li data-en="Performed testing and quality assurance to meet industry standards." data-zh="进行测试和质量保证，确保符合行业标准。">
-                    Performed testing and quality assurance to meet industry standards;
-                </li>
+                <li data-en="Involved in motor manufacturing, design, and testing;" data-zh="参与电机制造、设计和测试;" class="">Involved in motor manufacturing, design, and testing;</li>
+                <li data-en="Collaborated on motor component design and prototyping to improve performance;" data-zh="合作设计和制作电机组件，提升性能;" class="">Collaborated on motor component design and prototyping to improve performance;</li>
+                <li data-en="Performed testing and quality assurance to meet industry standards." data-zh="进行测试和质量保证，确保符合行业标准。" class="">Performed testing and quality assurance to meet industry standards.</li>
             </ul>
         </div>
         
         <!-- Honors&Awards-->
         <div class="section" id="honors">
-            <h2 data-en="HONORS & AWARDS" data-zh="荣誉奖项">HONORS & AWARDS</h2>
+            <h2 data-en="HONORS &amp; AWARDS" data-zh="荣誉奖项" class="">HONORS &amp; AWARDS</h2>
             <table>
-                <tr>
-                    <td><span class ="bullet"></span>
-                        <span data-en="Faculty of Engineering Peer Mentorship Programme Certificate 2023-2024" data-zh="工程学院同伴指导项目证书 2023-2024">
-                            Faculty of Engineering Peer Mentorship Programme Certificate 2023-2024
-                        </span>
+                <tbody><tr>
+                    <td><span class="bullet"></span>
+                        <span data-en="Faculty of Engineering Peer Mentorship Programme Certificate 2023-2024" data-zh="工程学院同伴指导项目证书 2023-2024" class="">Faculty of Engineering Peer Mentorship Programme Certificate 2023-2024</span>
                     </td>
-                    <td data-en="2024.07" data-zh="2024.07">2024.07</td>
+                    <td data-en="2024.07" data-zh="2024.07" class="">2024.07</td>
                 </tr>
                 <tr>
                     <td><span class="bullet"></span>
-                        <span data-en="Faculty of Engineering Peer Mentorship Programme Certificate 2022-2023" data-zh="工程学院同伴指导项目证书 2022-2023">
-                            Faculty of Engineering Peer Mentorship Programme Certificate 2022-2023
-                        </span>
+                        <span data-en="Faculty of Engineering Peer Mentorship Programme Certificate 2022-2023" data-zh="工程学院同伴指导项目证书 2022-2023" class="">Faculty of Engineering Peer Mentorship Programme Certificate 2022-2023</span>
                     </td>
-                    <td data-en="2023.07" data-zh="2023.07">2023.07</td>
+                    <td data-en="2023.07" data-zh="2023.07" class="">2023.07</td>
                 </tr>
                 <tr>
                     <td><span class="bullet"></span>
-                        <span data-en="Dean’s Honors List 2021-2022" data-zh="院长荣誉名单 2021-2022">
-                            Dean’s Honors List 2021-2022
-                        </span>
+                        <span data-en="Dean’s Honors List 2021-2022" data-zh="院长荣誉名单 2021-2022" class="">Dean’s Honors List 2021-2022</span>
                     </td>
-                    <td data-en="2023.02" data-zh="2023.02">2023.02</td>
+                    <td data-en="2023.02" data-zh="2023.02" class="">2023.02</td>
                 </tr>
                 <tr>
                     <td><span class="bullet"></span>
-                        <span data-en="The 2022 RobotMaster Sim2Real Challenge First Prize" data-zh="2022机器人大师Sim2Real挑战赛一等奖">
-                            The 2022 RobotMaster Sim2Real Challenge First Prize
-                        </span>
+                        <span data-en="The 2022 RobotMaster Sim2Real Challenge First Prize" data-zh="2022机器人大师Sim2Real挑战赛一等奖" class="">The 2022 RobotMaster Sim2Real Challenge First Prize</span>
                     </td>
-                    <td data-en="2022.08" data-zh="2022.08">2022.08</td>
+                    <td data-en="2022.08" data-zh="2022.08" class="">2022.08</td>
                 </tr>
                 <tr>
                     <td><span class="bullet"></span>
-                        <span data-en="Dean’s Honors List 2020-2021" data-zh="院长荣誉名单 2020-2021">
-                            Dean’s Honors List 2020-2021
-                        </span>
+                        <span data-en="Dean’s Honors List 2020-2021" data-zh="院长荣誉名单 2020-2021" class="">Dean’s Honors List 2020-2021</span>
                     </td>
-                    <td data-en="2022.01" data-zh="2022.01">2022.01</td>
+                    <td data-en="2022.01" data-zh="2022.01" class="">2022.01</td>
                 </tr>
-            </table>
+            </tbody></table>
         </div>
         
         <!-- Publications & Patents -->
         <div class="section" id="publications">
-            <h2 data-en="PUBLICATIONS & PATENTS" data-zh="学术成果">PUBLICATIONS & PATENTS</h2>
+            <h2 data-en="PUBLICATIONS &amp; PATENTS" data-zh="学术成果" class="">PUBLICATIONS &amp; PATENTS</h2>
             
             <table>
-                <tr>
+                <tbody><tr>
                     <td><span class="bullet"></span>
-                        <span data-en="Organic Solar Thin Film Cell Simulation Based on Transfer Matrix" data-zh="基于传输矩阵的有机太阳能薄膜电池仿真">
-                            Organic Solar Thin Film Cell Simulation Based on Transfer Matrix
-                        </span>
+                        <span data-en="Organic Solar Thin Film Cell Simulation Based on Transfer Matrix" data-zh="基于传输矩阵的有机太阳能薄膜电池仿真" class="">Organic Solar Thin Film Cell Simulation Based on Transfer Matrix</span>
                     </td>
-                    <td data-en="Software Copyright" data-zh="软件著作权">Software Copyright</td>
+                    <td data-en="Software Copyright" data-zh="软件著作权" class="">Software Copyright</td>
                 </tr>
                 <tr>
                     <td><span class="bullet"></span>
-                        <span data-en="Enhancing CQF Redundancy with Delay Alignment Scheduling in TSN" data-zh="通过延迟对齐调度增强TSN中的CQF冗余">
-                            Enhancing CQF Redundancy with Delay Alignment Scheduling in TSN
-                        </span>
+                        <span data-en="Enhancing CQF Redundancy with Delay Alignment Scheduling in TSN" data-zh="通过延迟对齐调度增强TSN中的CQF冗余" class="">Enhancing CQF Redundancy with Delay Alignment Scheduling in TSN</span>
                     </td>
-                    <td data-en="Research Paper" data-zh="研究论文">Research Paper</td>
+                    <td data-en="Research Paper" data-zh="研究论文" class="">Research Paper</td>
                 </tr>
-            </table>
+            </tbody></table>
         </div>
         
         <!-- Skills & Languages -->
         <div class="section" id="skills">
-            <h2 data-en="SKILLS & LANGUAGES" data-zh="技能与语言">SKILLS & LANGUAGES</h2>
+            <h2 data-en="SKILLS &amp; LANGUAGES" data-zh="技能与语言" class="">SKILLS &amp; LANGUAGES</h2>
         <ul>
-            <li data-en="Languages: Mandarin (Native), English (Work language), Cantonese (Basic)" data-zh="语言: 普通话 (母语), 英语 (工作语言), 粤语 (基础)">
-                Languages: Mandarin (Native), English (Work language), Cantonese (Basic)
-            </li>
-            <li data-en="IT skills: Pytorch, SQL, VHDL, MATLAB, C, Python" data-zh="IT技能: Pytorch, SQL, VHDL, MATLAB, C, Python">
-                IT skills: Pytorch, SQL, VHDL, MATLAB, C, Python
-            </li>
+            <li data-en="Languages: Mandarin (Native), English (Work language), Cantonese (Basic)" data-zh="语言: 普通话 (母语), 英语 (工作语言), 粤语 (基础)" class="">Languages: Mandarin (Native), English (Work language), Cantonese (Basic)</li>
+            <li data-en="IT skills: Pytorch, SQL, VHDL, MATLAB, C, Python" data-zh="IT技能: Pytorch, SQL, VHDL, MATLAB, C, Python" class="">IT skills: Pytorch, SQL, VHDL, MATLAB, C, Python</li>
         </ul>
         </div>
 
         <!-- Extracurricular Activities -->
         <div class="section print-hide" id="activities">
-            <h2 data-en="EXTRACURRICULAR ACTIVITIES" data-zh="课外活动">EXTRACURRICULAR ACTIVITIES</h2>
+            <h2 data-en="EXTRACURRICULAR ACTIVITIES" data-zh="课外活动" class="">EXTRACURRICULAR ACTIVITIES</h2>
             <table>
-                <tr>
+                <tbody><tr>
                     <td><span class="bullet"></span>
-                        <span data-en="Faculty Student Adviser (FSA), Faculty of Engineering, HKU, Hong Kong" data-zh="工程学院学生顾问 (FSA), 香港大学工程学院, 香港">
-                            Faculty Student Adviser (FSA), Faculty of Engineering, HKU, Hong Kong
-                        </span>
+                        <span data-en="Faculty Student Adviser (FSA), Faculty of Engineering, HKU, Hong Kong" data-zh="工程学院学生顾问 (FSA), 香港大学工程学院, 香港" class="">Faculty Student Adviser (FSA), Faculty of Engineering, HKU, Hong Kong</span>
                     </td>
-                    <td data-en="2022.09-2024.06" data-zh="2022.09-2024.06">2022.09-2024.06</td>
+                    <td data-en="2022.09-2024.06" data-zh="2022.09-2024.06" class="">2022.09-2024.06</td>
                 </tr>
                 <tr>
                     <td><span class="bullet"></span>
-                        <span data-en="Assistant, Guizhou Counterpart Assistance Activities, Ningbo Public Security Bureau, Ningbo" data-zh="助理, 贵州对口援助活动, 宁波公安局, 宁波">
-                            Assistant, Guizhou Counterpart Assistance Activities, Ningbo Public Security Bureau, Ningbo
-                        </span>
+                        <span data-en="Assistant, Guizhou Counterpart Assistance Activities, Ningbo Public Security Bureau, Ningbo" data-zh="助理, 贵州对口援助活动, 宁波公安局, 宁波" class="">Assistant, Guizhou Counterpart Assistance Activities, Ningbo Public Security Bureau, Ningbo</span>
                     </td>
-                    <td data-en="2021.07" data-zh="2021.07">2021.07</td>
+                    <td data-en="2021.07" data-zh="2021.07" class="">2021.07</td>
                 </tr>
-            </table>
+            </tbody></table>
         </div>
         
         
         <!-- Appendix -->
         <div class="section" id="appendix">
-            <h2 data-en="APPENDIX" data-zh="附录">APPENDIX</h2>
+            <h2 data-en="APPENDIX" data-zh="附录" class="">APPENDIX</h2>
             <h3>
                 <div class="photo">
                     <img src="./images/RMUA.jpeg" alt="RUMA Sim2Real Candidates Photos">
-                    <div class="caption" data-en="The 2022 RobotMaster Sim2Real Challenge First Prize Team" data-zh="2022机器人大师Sim2Real挑战赛一等奖团队">
-                        The 2022 RobotMaster Sim2Real Challenge First Prize Team
-                    </div>
+                    <div class="caption" data-en="The 2022 RobotMaster Sim2Real Challenge First Prize Team" data-zh="2022机器人大师Sim2Real挑战赛一等奖团队">The 2022 RobotMaster Sim2Real Challenge First Prize Team</div>
                 </div>
             </h3>
             <h3>
                 <div class="photo">
                     <img src="./images/FYP.png" alt="Part of Final Year Project results">
-                    <div class="caption" data-en="Part of the results of the Final Year Project" data-zh="部分毕业设计结果">
-                        Part of the results of the Final Year Project
-                    </div>
+                    <div class="caption" data-en="Part of the results of the Final Year Project" data-zh="部分毕业设计结果">Part of the results of the Final Year Project</div>
                 </div>
             </h3>
             <h3>
                 <div class="photo">
                     <img src="./images/presentation.png" alt="Final Year Project Presentation">
-                    <div class="caption" data-en="Final Year Project Presentation" data-zh="毕业设计展示">
-                        Final Year Project Presentation
-                    </div>
+                    <div class="caption" data-en="Final Year Project Presentation" data-zh="毕业设计展示">Final Year Project Presentation</div>
                 </div>
             </h3>
             <h3>
                 <center>
-                    <a href="./fyp.html" target="_blank" data-en="Senior Design Project Link" data-zh="高级设计项目链接">Senior Design Project Link</a>
+                    <a href="./fyp.html" target="_blank" data-en="Senior Design Project Link" data-zh="高级设计项目链接" class="">Senior Design Project Link</a>
                 </center>
             </h3>
             <h3>
                 <center>
-                    <a href="./certificates.html" target="_blank" data-en="Certificates Copy" data-zh="证书副本">Certificates Copy</a>
+                    <a href="./certificates.html" target="_blank" data-en="Certificates Copy" data-zh="证书副本" class="">Certificates Copy</a>
                 </center>
             </h3>
 
-            <div align ="right">
-                <p id="last-updated-label" data-en="Last updated on 2026-01-26" data-zh="最近更新于 2026-01-26">Last updated on 2026-01-26</p>
-                <p data-en="Press 'h' to hide the navigation bar and appendix and 'j' to show it." data-zh="按下 'h' 隐藏导航栏和附录，按下 'j' 显示。">Press 'h' to hide the navigation bar and appendix and 'j' to show it.</p>
-                <p data-en="Press '0' to toggle header style." data-zh="按下 '0' 键切换标题样式。">Press '0' to toggle header style.</p>
+            <div align="right">
+                <p id="last-updated-label" data-en="Last updated on 2026-01-26" data-zh="最近更新于 2026-01-26" class="">Last updated on 2026-01-26</p>
+                <p data-en="Press 'h' to hide the navigation bar and appendix and 'j' to show it." data-zh="按下 'h' 隐藏导航栏和附录，按下 'j' 显示。" class="">Press 'h' to hide the navigation bar and appendix and 'j' to show it.</p>
+                <p data-en="Press '0' to toggle header style." data-zh="按下 '0' 键切换标题样式。" class="">Press '0' to toggle header style.</p>
+                <p data-en="Press 'i' to toggle edit mode. In edit mode, press Ctrl/Cmd+S to save changes to index.html." data-zh="按下 'i' 键切换编辑模式。在编辑模式中，按 Ctrl/Cmd+S 将更改保存到 index.html。" class="">Press 'i' to toggle edit mode. In edit mode, press Ctrl/Cmd+S to save changes to index.html.</p>
             </div>
 
         </div>
@@ -406,7 +314,46 @@
     </div>
     <script src="script.js"></script> <!-- 引用外部JS文件 -->
 
-</body>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
 
 
-</html>
+
+
+<div id="monica-content-root" class="monica-widget" style="pointer-events: auto;"></div></body></html>
