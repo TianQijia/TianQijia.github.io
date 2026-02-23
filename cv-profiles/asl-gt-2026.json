@@ -1,0 +1,73 @@
+{
+  "id": "asl-gt-2026",
+  "title_en": "Graduate Trainee Programme (2026) - Automated Systems (H.K.) Limited",
+  "title_zh": "毕业培训生计划（2026）- Automated Systems (H.K.) Limited",
+  "output_base_name": "asl-gt-2026-focus",
+  "output_dir": "cv-output",
+  "css_path": "cv-assets/cv-focus.css",
+  "target_languages": ["en", "zh"],
+  "focus_tags": [
+    "python",
+    "generative-ai",
+    "agentic-ai",
+    "machine-learning",
+    "nlp",
+    "prompt-engineering",
+    "data-analysis",
+    "application-development"
+  ],
+  "section_config": {
+    "include": ["education", "experience", "projects", "internships", "skills", "honors", "publications", "application_meta"],
+    "max_items_per_section": {
+      "projects": 2,
+      "internships": 1
+    },
+    "max_bullets_per_item": 4
+  },
+  "application_requirements": {
+    "stream_preferences_en": [
+      "Data Science",
+      "Application Development",
+      "Business Analysis / Project Management"
+    ],
+    "stream_preferences_zh": [
+      "数据科学",
+      "应用开发",
+      "商业分析 / 项目管理"
+    ],
+    "expected_salary_en": "HKD 26,000 / month (negotiable)",
+    "expected_salary_zh": "期望薪资：HKD 26,000 / 月（可商议）",
+    "date_of_availability_en": "Available with 1-month notice",
+    "date_of_availability_zh": "可入职日期：需提前一个月通知"
+  },
+  "ai_processing": {
+    "enabled": true,
+    "tasks": [
+      {
+        "id": "extract-job-keywords",
+        "instruction_en": "Extract high-priority keywords from the job description and match them to focus_tags.",
+        "instruction_zh": "从岗位描述中提取高优先级关键词，并映射到 focus_tags。"
+      },
+      {
+        "id": "refine-application-requirements",
+        "instruction_en": "Rewrite stream preferences, expected salary, and availability in concise HR-friendly wording for this employer.",
+        "instruction_zh": "将方向偏好、期望薪资与到岗时间重写为更简洁、适合 HR 阅读的表达。"
+      },
+      {
+        "id": "tailor-summary",
+        "instruction_en": "Generate a short role-tailored summary emphasizing Python, GenAI, ML, NLP, and data analysis.",
+        "instruction_zh": "生成岗位定制短摘要，突出 Python、生成式 AI、机器学习、NLP 与数据分析。"
+      }
+    ],
+    "prompt_hints_en": [
+      "Keep output factual and ATS-friendly.",
+      "Prefer measurable impact and concrete technologies.",
+      "Do not invent experience."
+    ],
+    "prompt_hints_zh": [
+      "保持信息真实且适合 ATS 检索。",
+      "优先突出可量化成果与具体技术栈。",
+      "不得编造经历。"
+    ]
+  }
+}
