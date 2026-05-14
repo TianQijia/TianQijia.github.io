@@ -94,7 +94,51 @@ function buildSavableHtml() {
         clonedStatus.remove();
     }
 
+    cleanInjectedEditorArtifacts(rootClone);
+
     return `<!DOCTYPE html>\n${rootClone.outerHTML}\n`;
+}
+
+function cleanInjectedEditorArtifacts(rootClone) {
+    rootClone.querySelectorAll('#monica-content-root, #monica-writing-entry-btn-root, .monica-widget').forEach((el) => {
+        el.remove();
+    });
+
+    rootClone.querySelectorAll('style').forEach((el) => {
+        const text = el.textContent || '';
+        if (el.id === 'monica-reading-highlight-style' || text.includes('.imageye-selected')) {
+            el.remove();
+        }
+    });
+
+    rootClone.querySelectorAll('script').forEach((el) => {
+        const text = el.textContent || '';
+        if (text.includes('Live reload enabled.') || text.includes('Code injected by live-server')) {
+            el.remove();
+        }
+    });
+
+    const commentWalker = document.createTreeWalker(rootClone, NodeFilter.SHOW_COMMENT);
+    const commentsToRemove = [];
+    while (commentWalker.nextNode()) {
+        const node = commentWalker.currentNode;
+        if (node.textContent.includes('Code injected by live-server')) {
+            commentsToRemove.push(node);
+        }
+    }
+    commentsToRemove.forEach((node) => node.remove());
+
+    rootClone.querySelectorAll('*').forEach((el) => {
+        Array.from(el.attributes).forEach((attr) => {
+            if (attr.name.startsWith('data-listener-added_') || attr.name.startsWith('monica-')) {
+                el.removeAttribute(attr.name);
+            }
+        });
+
+        if (el.getAttribute('class') === '') {
+            el.removeAttribute('class');
+        }
+    });
 }
 
 async function saveIndexHtml() {
@@ -199,13 +243,13 @@ document.addEventListener('keydown', async (event) => {
     }
 
     if (event.key === 'h') {
-        appendix.style.display = 'none';
-        activities.style.display = 'none';
-        nav.style.display = 'none';
+        if (appendix) appendix.style.display = 'none';
+        if (activities) activities.style.display = 'none';
+        if (nav) nav.style.display = 'none';
     } else if (event.key === 'j') {
-        appendix.style.display = 'block';
-        activities.style.display = 'block';
-        nav.style.display = 'block';
+        if (appendix) appendix.style.display = 'block';
+        if (activities) activities.style.display = 'block';
+        if (nav) nav.style.display = 'block';
     } else if (event.key === '0') {
         document.body.classList.toggle('resume-print-mode');
     }
@@ -216,6 +260,9 @@ document.querySelectorAll('.nav ul li a').forEach((link) => {
         event.preventDefault(); // 阻止默认跳转行为
         const targetId = link.getAttribute('href').substring(1);
         const targetElement = document.getElementById(targetId);
+        if (!targetElement) {
+            return;
+        }
 
         // 获取目标元素的顶部位置并调整
         const offsetTop = targetElement.offsetTop - 60; // 这里的 60 是你想要的偏移量，可以根据需要调整

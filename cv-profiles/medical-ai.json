@@ -1,0 +1,26 @@
+{
+  "id": "medical-ai",
+  "title_en": "Tian Qijia - Medical AI Focus CV",
+  "title_zh": "田骐嘉 - 医疗AI方向简历",
+  "output_base_name": "cv-focus-medical-ai",
+  "output_dir": "cv-output",
+  "css_path": "cv-assets/cv-focus.css",
+  "target_languages": ["en", "zh"],
+  "focus_tags": [
+    "python",
+    "machine-learning",
+    "computer-vision",
+    "nlp",
+    "generative-ai",
+    "data-analysis",
+    "ai"
+  ],
+  "section_config": {
+    "include": ["education", "experience", "projects", "internships", "skills", "honors", "publications"],
+    "max_items_per_section": {
+      "projects": 2,
+      "internships": 1
+    },
+    "max_bullets_per_item": 5
+  }
+}
