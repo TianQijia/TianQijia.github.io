@@ -277,7 +277,6 @@ window.addEventListener('scroll', () => {
 
 document.addEventListener('keydown', async (event) => {
     const appendix = document.getElementById('appendix');
-    const activities = document.getElementById('activities');
     const nav = document.querySelector('.nav');
 
     const target = event.target;
@@ -323,11 +322,9 @@ document.addEventListener('keydown', async (event) => {
 
     if (event.key === 'h') {
         appendix.style.display = 'none';
-        activities.style.display = 'none';
         nav.style.display = 'none';
     } else if (event.key === 'j') {
         appendix.style.display = 'block';
-        activities.style.display = 'block';
         nav.style.display = 'block';
     } else if (event.key === '0') {
         document.body.classList.toggle('resume-print-mode');
