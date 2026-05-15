@@ -1,5 +1,12 @@
 /* 通用样式 */
 body {
+    --export-name-font: 15pt;
+    --export-contact-font: 8pt;
+    --export-section-font: 10.5pt;
+    --export-entry-font: 9.2pt;
+    --export-body-font: 8.4pt;
+    --export-date-font: 8pt;
+    --export-line-height: 1.24;
     font-family: Arial, sans-serif;
     font-size: 17px;
     line-height: 1.6;
@@ -186,6 +193,311 @@ td {
     margin-bottom: 14px;
 }
 
+.export-modal[hidden] {
+    display: none;
+}
+
+.export-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 18px;
+    background: rgba(15, 23, 42, 0.55);
+}
+
+.export-dialog {
+    width: min(1240px, 100%);
+    max-height: min(88vh, 860px);
+    overflow: auto;
+    background: #ffffff;
+    color: #111827;
+    border-radius: 8px;
+    box-shadow: 0 24px 70px rgba(15, 23, 42, 0.32);
+}
+
+.export-dialog-header,
+.export-dialog-actions {
+    position: sticky;
+    z-index: 1;
+    background: #ffffff;
+}
+
+.export-dialog-header {
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 18px 22px 12px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.export-dialog-header h2 {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 20px;
+}
+
+.export-close {
+    width: 34px;
+    height: 34px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    background: #ffffff;
+    color: #111827;
+    font-size: 22px;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.export-dialog-body {
+    display: grid;
+    grid-template-columns: minmax(220px, 0.8fr) minmax(260px, 0.95fr) minmax(390px, 1.25fr);
+    gap: 18px;
+    padding: 18px 22px;
+}
+
+.export-fieldset {
+    margin: 0 0 16px;
+    padding: 14px;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+}
+
+.export-fieldset legend {
+    padding: 0 6px;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.export-option,
+.export-checkbox,
+.export-number-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 8px 0;
+    font-size: 14px;
+    line-height: 1.35;
+}
+
+.export-checkbox {
+    align-items: flex-start;
+}
+
+.export-checkbox input {
+    margin-top: 2px;
+}
+
+.export-entry-list {
+    max-height: 330px;
+    overflow: auto;
+    padding-right: 4px;
+}
+
+.export-entry-group {
+    margin: 10px 0 12px;
+}
+
+.export-entry-group-title {
+    margin: 0 0 6px;
+    font-size: 13px;
+    font-weight: 700;
+    color: #374151;
+}
+
+.export-entry-meta {
+    display: block;
+    margin-top: 2px;
+    color: #6b7280;
+    font-size: 12px;
+}
+
+.export-number-row {
+    justify-content: space-between;
+}
+
+.export-number-row span {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.export-number-row small {
+    color: #6b7280;
+    font-size: 12px;
+    line-height: 1.2;
+}
+
+.export-number-row input {
+    width: 88px;
+    padding: 6px 8px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    font: inherit;
+}
+
+.export-dialog-actions {
+    bottom: 0;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    padding: 12px 22px 18px;
+    border-top: 1px solid #e5e7eb;
+}
+
+.export-action {
+    min-width: 92px;
+    padding: 9px 14px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    background: #ffffff;
+    color: #111827;
+    font: inherit;
+    cursor: pointer;
+}
+
+.export-action.primary {
+    border-color: #0f766e;
+    background: #0f766e;
+    color: #ffffff;
+}
+
+.resume-export-hidden {
+    display: none !important;
+}
+
+.export-preview-fieldset {
+    grid-column: auto;
+    min-width: 0;
+}
+
+.export-preview {
+    max-height: 66vh;
+    overflow: auto;
+    background: #f3f4f6;
+    padding: 14px;
+    border-radius: 6px;
+}
+
+.export-preview-page-wrap {
+    position: relative;
+    margin: 0 auto 16px;
+}
+
+.export-preview-page {
+    width: 794px;
+    height: 1123px;
+    box-sizing: border-box;
+    overflow: hidden;
+    transform-origin: top left;
+    padding: 54px 72px;
+    background: #ffffff;
+    color: #000000;
+    box-shadow: 0 8px 28px rgba(15, 23, 42, 0.12);
+    font-family: Arial, sans-serif;
+    font-size: var(--preview-body-font);
+    line-height: var(--preview-line-height);
+}
+
+.export-preview-page-label {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin-top: 6px;
+    color: #6b7280;
+    font-size: 12px;
+    text-align: center;
+}
+
+.export-preview-page h1 {
+    margin: 0 0 4px;
+    padding: 0;
+    border: 0;
+    text-align: center;
+    font-size: var(--preview-name-font);
+    line-height: 1.08;
+}
+
+.export-preview-header p,
+.export-preview-page > p {
+    margin: 1px 0;
+    padding: 0;
+    text-align: center;
+    font-size: var(--preview-contact-font);
+    line-height: var(--preview-line-height);
+}
+
+.export-preview-page section {
+    margin-top: 8px;
+}
+
+.export-preview-page h2 {
+    margin: 7px 0 4px;
+    padding: 0;
+    border-bottom: 1px solid #000000;
+    font-size: var(--preview-section-font);
+    line-height: 1.1;
+}
+
+.export-preview-page .export-preview-bullet {
+    margin: 1px 0 1px 12px;
+    padding: 0;
+    text-align: left;
+    font-size: var(--preview-body-font);
+    line-height: var(--preview-line-height);
+}
+
+.export-preview-entry {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    margin: 3px 0 1px;
+    font-size: var(--preview-entry-font);
+    line-height: var(--preview-line-height);
+}
+
+.export-preview-entry span {
+    flex: 0 0 auto;
+    font-size: var(--preview-date-font);
+}
+
+.export-preview-page ul {
+    margin: 2px 0 6px;
+    padding-left: 18px;
+}
+
+.export-preview-page li {
+    margin: 1px 0;
+    font-size: var(--preview-body-font);
+    line-height: var(--preview-line-height);
+}
+
+@media (max-width: 1100px) {
+    .export-dialog-body {
+        grid-template-columns: minmax(260px, 1fr) minmax(320px, 1fr);
+    }
+
+    .export-preview-fieldset {
+        grid-column: 1 / -1;
+    }
+}
+
+@media (max-width: 720px) {
+    .export-dialog-body {
+        grid-template-columns: 1fr;
+    }
+
+    .export-preview-page {
+        padding: 54px 72px;
+    }
+}
+
 /* 
 .section {
     background-color: white;
@@ -225,8 +537,8 @@ td {
 /* Print mode class for toggling with '0' key */
 .resume-print-mode {
     background-color: white !important;
-    font-size: 12px !important;
-    line-height: 1.25 !important;
+    font-size: var(--export-body-font) !important;
+    line-height: var(--export-line-height) !important;
 }
 
 .resume-print-mode .header {
@@ -242,12 +554,12 @@ td {
 }
 
 .resume-print-mode .header .info h1 {
-    font-size: 22px !important;
+    font-size: var(--export-name-font) !important;
     margin: 2px 0 !important;
 }
 
 .resume-print-mode .header .info p {
-    font-size: 11px !important;
+    font-size: var(--export-contact-font) !important;
     margin: 1px 0 !important;
     padding-left: 0 !important;
 }
@@ -272,28 +584,35 @@ td {
 }
 
 .resume-print-mode h2 {
-    font-size: 14.5px !important;
+    font-size: var(--export-section-font) !important;
     margin: 8px 0 4px 0 !important;
     padding-left: 0 !important;
     border-bottom: 1.5px solid black !important;
 }
 
 .resume-print-mode h3 {
-    font-size: 12.5px !important;
+    font-size: var(--export-entry-font) !important;
     margin: 3px 0 1px 0 !important;
     padding-left: 5px !important;
+}
+
+.resume-print-mode .h3container p {
+    font-size: var(--export-date-font) !important;
+    line-height: var(--export-line-height) !important;
+    padding-left: 0 !important;
 }
 
 .resume-print-mode p, 
 .resume-print-mode li,
 .resume-print-mode td {
-    font-size: 11.6px !important;
+    font-size: var(--export-body-font) !important;
+    line-height: var(--export-line-height) !important;
     margin: 2px 0 !important;
     padding-left: 10px !important;
 }
 
 .resume-print-mode li {
-    line-height: 1.3 !important;
+    line-height: var(--export-line-height) !important;
 }
 
 .resume-print-mode ul {
@@ -324,8 +643,8 @@ td {
 @media print {
     body {
         background-color: white !important;
-        font-size: 11px;
-        line-height: 1.2;
+        font-size: var(--export-body-font);
+        line-height: var(--export-line-height);
         margin: 0;
         padding: 0;
     }
@@ -346,12 +665,12 @@ td {
     }
 
     .header .info h1 {
-        font-size: 18px;
+        font-size: var(--export-name-font);
         margin: 2px 0;
     }
 
     .header .info p {
-        font-size: 10px;
+        font-size: var(--export-contact-font);
         margin: 0.5px 0;
         padding-left: 0;
     }
@@ -366,20 +685,27 @@ td {
     }
     
     h2 {
-        font-size: 14px;
+        font-size: var(--export-section-font);
         margin: 8px 0 4px 0;
         padding-left: 0;
         border-bottom: 1.5px solid black;
     }
     
     h3 {
-        font-size: 12px;
+        font-size: var(--export-entry-font);
         margin: 3px 0 1px 0;
         padding-left: 5px;
     }
+
+    .h3container p {
+        font-size: var(--export-date-font);
+        line-height: var(--export-line-height);
+        padding-left: 0;
+    }
     
     p, li, td {
-        font-size: 11.2px;
+        font-size: var(--export-body-font);
+        line-height: var(--export-line-height);
         margin: 1.6px 0;
         padding-left: 10px;
     }
@@ -390,7 +716,7 @@ td {
     }
 
     li {
-        line-height: 1.28;
+        line-height: var(--export-line-height);
     }
     
     table {
@@ -401,4 +727,3 @@ td {
         padding: 1px 5px;
     }
 }
-
