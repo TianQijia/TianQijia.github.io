@@ -4,6 +4,20 @@ finalcode.html
 finalcode.ipynb
 index_v1.html
 
+# Local resume/CV customization outputs
+# Keep job-specific resumes and generated artifacts local by default.
+cv-output/
+cv-profiles/
+cv-data/
+cv-assets/
+medical-ai-focus.html
+medical-ai-focus-zh.html
+medical-ai-focus.css
+
+# Local resume/CV generation helpers
+tools/generate_cv.py
+tools/create_*_cv_docx.py
+
 # System files
 .DS_Store
 .DS_Store?
