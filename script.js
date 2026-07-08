@@ -3,9 +3,23 @@ const editableSelector = '[data-en]';
 const saveEndpoint = 'http://127.0.0.1:5501/save-index';
 let isEditMode = false;
 let statusTimer = null;
+let currentLanguage = document.documentElement.lang === 'zh' ? 'zh' : 'en';
 
 function pageIsChinese() {
-    return toggleLanguageButton.textContent === 'English';
+    return currentLanguage === 'zh';
+}
+
+function applyLanguage(language) {
+    currentLanguage = language === 'zh' ? 'zh' : 'en';
+    document.documentElement.lang = currentLanguage;
+    toggleLanguageButton.textContent = currentLanguage === 'zh' ? 'English' : '中文';
+
+    document.querySelectorAll(editableSelector).forEach((el) => {
+        const localizedText = el.getAttribute(currentLanguage === 'zh' ? 'data-zh' : 'data-en');
+        if (localizedText !== null) {
+            el.textContent = localizedText;
+        }
+    });
 }
 
 function showEditStatus(message, isError = false) {
@@ -83,6 +97,11 @@ function buildSavableHtml() {
                 el.textContent = englishText;
             }
         });
+    }
+    rootClone.lang = 'en';
+    const clonedToggle = rootClone.querySelector('#toggleLanguage');
+    if (clonedToggle) {
+        clonedToggle.textContent = '中文';
     }
 
     rootClone.querySelectorAll('[contenteditable]').forEach((el) => el.removeAttribute('contenteditable'));
@@ -817,13 +836,13 @@ function exportToWord(settings = getActiveExportSettings()) {
     URL.revokeObjectURL(url);
 }
 
-toggleLanguageButton.addEventListener('click', () => {
-    const isChinese = toggleLanguageButton.textContent === '中文';
-    toggleLanguageButton.textContent = isChinese ? 'English' : '中文';
+applyLanguage(currentLanguage);
 
-    document.querySelectorAll(editableSelector).forEach((el) => {
-        el.textContent = isChinese ? el.getAttribute('data-zh') : el.getAttribute('data-en');
-    });
+toggleLanguageButton.addEventListener('click', () => {
+    if (isEditMode) {
+        syncBilingualAttrsFromCurrentView();
+    }
+    applyLanguage(pageIsChinese() ? 'en' : 'zh');
 });
 
 // 选择所有的导航链接
